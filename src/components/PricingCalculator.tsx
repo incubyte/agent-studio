@@ -6,253 +6,322 @@ import { CheckmarkCircleFilled } from '@fluentui/react-icons';
 
 const useStyles = makeStyles({
   section: {
-    ...shorthands.padding('100px', '24px'),
-    backgroundColor: '#1a1a2e',
+    ...shorthands.padding('120px', '32px'),
+    backgroundColor: '#0F172A',
+    '@media (max-width: 768px)': {
+      ...shorthands.padding('80px', '24px'),
+    },
   },
-  
+
   container: {
-    maxWidth: '1100px',
+    maxWidth: '1200px',
     marginLeft: 'auto',
     marginRight: 'auto',
   },
-  
+
   header: {
     textAlign: 'center',
     marginBottom: '64px',
   },
-  
+
   label: {
-    fontSize: '14px',
+    fontSize: '12px',
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#ff6b35',
+    color: '#E07A3A',
     marginBottom: '16px',
   },
-  
+
   title: {
     fontSize: '48px',
     fontWeight: 700,
-    color: '#ffffff',
+    color: '#F1F5F9',
     marginBottom: '16px',
+    lineHeight: 1.1,
+    letterSpacing: '-0.02em',
     '@media (max-width: 768px)': {
       fontSize: '36px',
     },
   },
-  
+
   subtitle: {
-    fontSize: '18px',
-    color: '#a0a0b0',
+    fontSize: '20px',
+    color: '#94A3B8',
+    maxWidth: '700px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    lineHeight: 1.6,
+    fontWeight: 400,
   },
   
   calculator: {
+    backgroundColor: '#111827',
+    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
+    ...shorthands.borderRadius('16px'),
+    ...shorthands.padding('48px'),
+    maxWidth: '1100px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
     display: 'grid',
-    gridTemplateColumns: '1fr 380px',
-    ...shorthands.gap('48px'),
+    gridTemplateColumns: '1fr 400px',
+    ...shorthands.gap('64px'),
     '@media (max-width: 900px)': {
       gridTemplateColumns: '1fr',
+      ...shorthands.padding('32px'),
+      ...shorthands.gap('48px'),
     },
   },
-  
+
   config: {
     display: 'flex',
     flexDirection: 'column',
-    ...shorthands.gap('32px'),
+    ...shorthands.gap('40px'),
   },
-  
+
   configSection: {
-    backgroundColor: '#242444',
-    ...shorthands.borderRadius('16px'),
-    ...shorthands.padding('24px'),
+    display: 'flex',
+    flexDirection: 'column',
+    ...shorthands.gap('20px'),
   },
   
   configTitle: {
     fontSize: '18px',
     fontWeight: 600,
-    color: '#ffffff',
-    marginBottom: '16px',
+    color: '#F1F5F9',
     display: 'flex',
     alignItems: 'center',
     ...shorthands.gap('8px'),
+    lineHeight: 1.3,
   },
-  
+
   sliderWrapper: {
-    marginBottom: '16px',
+    display: 'flex',
+    flexDirection: 'column',
+    ...shorthands.gap('16px'),
   },
-  
+
   sliderLabel: {
     display: 'flex',
     justifyContent: 'space-between',
-    marginBottom: '8px',
     fontSize: '14px',
+    color: '#94A3B8',
+    fontWeight: 500,
   },
-  
+
   sliderValue: {
-    color: '#ff6b35',
+    color: '#E07A3A',
     fontWeight: 600,
+    fontSize: '16px',
+  },
+
+  sliderNote: {
+    fontSize: '14px',
+    color: '#64748B',
+    lineHeight: 1.5,
+    fontWeight: 400,
   },
   
   tierGrid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(2, 1fr)',
-    ...shorthands.gap('12px'),
+    ...shorthands.gap('16px'),
   },
-  
+
   tierCard: {
-    backgroundColor: '#1a1a2e',
-    ...shorthands.borderRadius('12px'),
+    backgroundColor: 'rgba(255, 255, 255, 0.02)',
+    ...shorthands.borderRadius('8px'),
     ...shorthands.padding('16px'),
-    ...shorthands.border('2px', 'solid', '#2a2a4e'),
+    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
     cursor: 'pointer',
-    transition: 'all 0.2s ease',
+    transition: 'border-color 0.2s ease, background 0.2s ease',
     ':hover': {
-      ...shorthands.borderColor('#ff6b35'),
+      borderColor: 'rgba(255, 255, 255, 0.12)',
     },
   },
-  
+
   tierCardActive: {
-    ...shorthands.borderColor('#ff6b35'),
-    backgroundColor: 'rgba(255, 107, 53, 0.1)',
+    borderColor: '#E07A3A',
+    backgroundColor: 'rgba(224, 122, 58, 0.05)',
   },
   
   tierName: {
     fontSize: '14px',
     fontWeight: 600,
-    color: '#ffffff',
-    marginBottom: '4px',
+    color: '#F1F5F9',
+    marginBottom: '8px',
   },
-  
+
   tierPrice: {
     fontSize: '18px',
     fontWeight: 700,
-    color: '#ff6b35',
+    color: '#E07A3A',
     marginBottom: '8px',
+    lineHeight: 1,
   },
-  
+
   tierDescription: {
-    fontSize: '12px',
-    color: '#a0a0b0',
-    lineHeight: 1.4,
+    fontSize: '13px',
+    color: '#94A3B8',
+    lineHeight: 1.5,
+    marginBottom: '8px',
+    fontWeight: 400,
   },
-  
+
   tierExamples: {
-    fontSize: '11px',
-    color: '#707080',
-    marginTop: '8px',
+    fontSize: '12px',
+    color: '#64748B',
+    lineHeight: 1.4,
+    fontWeight: 400,
   },
-  
+
   tierCount: {
     marginTop: '16px',
     fontSize: '14px',
-    color: '#a0a0b0',
+    color: '#94A3B8',
+    fontWeight: 400,
   },
   
   summary: {
-    backgroundColor: '#0f0f1a',
-    ...shorthands.borderRadius('20px'),
+    backgroundColor: 'rgba(255, 255, 255, 0.02)',
+    ...shorthands.borderRadius('12px'),
     ...shorthands.padding('32px'),
-    ...shorthands.border('2px', 'solid', '#ff6b35'),
+    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
     position: 'sticky',
     top: '24px',
     height: 'fit-content',
+    display: 'flex',
+    flexDirection: 'column',
+    ...shorthands.gap('24px'),
   },
-  
+
   summaryTitle: {
-    fontSize: '20px',
-    fontWeight: 700,
-    color: '#ffffff',
-    marginBottom: '24px',
-    textAlign: 'center',
+    fontSize: '18px',
+    fontWeight: 600,
+    color: '#F1F5F9',
+    textAlign: 'left',
   },
   
+  summaryBreakdown: {
+    display: 'flex',
+    flexDirection: 'column',
+    ...shorthands.gap('12px'),
+    paddingBottom: '24px',
+    borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+  },
+
   summaryRow: {
     display: 'flex',
     justifyContent: 'space-between',
-    ...shorthands.padding('12px', '0'),
-    borderBottom: '1px solid #2a2a4e',
+    ...shorthands.gap('16px'),
     fontSize: '14px',
   },
-  
+
   summaryLabel: {
-    color: '#a0a0b0',
+    color: '#94A3B8',
+    fontWeight: 400,
   },
-  
+
   summaryValue: {
-    color: '#ffffff',
+    color: '#F1F5F9',
     fontWeight: 600,
   },
-  
+
   summaryTotal: {
     display: 'flex',
-    justifyContent: 'space-between',
-    ...shorthands.padding('24px', '0', '0'),
-    marginTop: '12px',
+    flexDirection: 'column',
+    ...shorthands.gap('16px'),
+    paddingTop: '24px',
+    borderTop: '1px solid rgba(255, 255, 255, 0.08)',
   },
-  
+
   totalLabel: {
-    fontSize: '18px',
-    color: '#ffffff',
+    fontSize: '14px',
+    color: '#94A3B8',
+    fontWeight: 500,
+    textTransform: 'uppercase',
+    letterSpacing: '0.5px',
+  },
+
+  priceDisplay: {
+    display: 'flex',
+    alignItems: 'baseline',
+    ...shorthands.gap('4px'),
+  },
+
+  priceCurrency: {
+    fontSize: '24px',
+    color: '#94A3B8',
     fontWeight: 600,
+    verticalAlign: 'top',
   },
-  
+
   totalValue: {
-    fontSize: '36px',
-    fontWeight: 800,
-    color: '#ff6b35',
+    fontSize: '56px',
+    fontWeight: 700,
+    color: '#F1F5F9',
+    letterSpacing: '-0.02em',
+    lineHeight: 1,
   },
-  
+
   totalNote: {
-    fontSize: '12px',
-    color: '#707080',
-    textAlign: 'right',
+    fontSize: '14px',
+    color: '#64748B',
+    fontWeight: 400,
   },
   
   ctaButton: {
     width: '100%',
-    marginTop: '24px',
-    backgroundColor: '#ff6b35',
-    color: '#ffffff',
+    backgroundColor: '#E07A3A',
+    color: '#0F172A',
     fontWeight: 600,
     fontSize: '16px',
     ...shorthands.padding('16px', '24px'),
     ...shorthands.borderRadius('8px'),
     ...shorthands.border('none'),
     cursor: 'pointer',
-    transition: 'all 0.2s ease',
+    transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+    boxShadow: '0 4px 12px rgba(224, 122, 58, 0.25)',
     ':hover': {
-      backgroundColor: '#ff8555',
-      transform: 'translateY(-2px)',
+      transform: 'translateY(-2px) scale(1.02)',
+      boxShadow: '0 6px 20px rgba(224, 122, 58, 0.3)',
     },
   },
-  
+
   included: {
-    marginTop: '24px',
-    ...shorthands.padding('16px'),
-    backgroundColor: 'rgba(76, 175, 80, 0.1)',
+    ...shorthands.padding('20px'),
+    backgroundColor: 'rgba(45, 212, 191, 0.05)',
     ...shorthands.borderRadius('8px'),
+    ...shorthands.border('1px', 'solid', 'rgba(45, 212, 191, 0.2)'),
   },
-  
+
   includedTitle: {
     fontSize: '12px',
     fontWeight: 600,
-    color: '#4caf50',
-    marginBottom: '8px',
+    color: '#2DD4BF',
+    marginBottom: '12px',
     textTransform: 'uppercase',
-    letterSpacing: '1px',
+    letterSpacing: '0.5px',
   },
-  
+
   includedItem: {
-    fontSize: '13px',
-    color: '#a0a0b0',
+    fontSize: '14px',
+    color: '#94A3B8',
     display: 'flex',
     alignItems: 'center',
-    ...shorthands.gap('6px'),
-    marginBottom: '4px',
+    ...shorthands.gap('10px'),
+    marginBottom: '8px',
+    fontWeight: 400,
+    lineHeight: 1.5,
+    ':last-child': {
+      marginBottom: 0,
+    },
   },
-  
+
   checkIcon: {
-    color: '#4caf50',
-    fontSize: '14px',
+    color: '#2DD4BF',
+    fontSize: '16px',
+    flexShrink: 0,
   },
 });
 
@@ -337,7 +406,7 @@ export function PricingCalculator() {
                   style={{ width: '100%' }}
                 />
               </div>
-              <p style={{ fontSize: '14px', color: '#707080' }}>
+              <p className={styles.sliderNote}>
                 ${BASE_AGENT_PRICE.toLocaleString()} per agent • Deploy multiple agents for greater automation
               </p>
             </div>
@@ -383,35 +452,36 @@ export function PricingCalculator() {
             transition={{ delay: 0.3, duration: 0.5 }}
           >
             <h3 className={styles.summaryTitle}>Your Quote</h3>
-            
-            <div className={styles.summaryRow}>
-              <span className={styles.summaryLabel}>
-                {agentCount} Agent{agentCount > 1 ? 's' : ''} × ${BASE_AGENT_PRICE.toLocaleString()}
-              </span>
-              <span className={styles.summaryValue}>
-                ${agentTotal.toLocaleString()}
-              </span>
-            </div>
-            
-            {getActiveIntegrations().map(tier => (
-              <div key={tier.id} className={styles.summaryRow}>
+
+            <div className={styles.summaryBreakdown}>
+              <div className={styles.summaryRow}>
                 <span className={styles.summaryLabel}>
-                  {tier.name} Integration
+                  {agentCount} Agent{agentCount > 1 ? 's' : ''} × ${BASE_AGENT_PRICE.toLocaleString()}
                 </span>
                 <span className={styles.summaryValue}>
-                  {tier.price === 0 ? (tier.id === 'tier-a' ? 'FREE' : 'TBD') : `$${tier.price.toLocaleString()}`}
+                  ${agentTotal.toLocaleString()}
                 </span>
               </div>
-            ))}
-            
-            <div className={styles.summaryTotal}>
-              <span className={styles.totalLabel}>Total</span>
-              <div>
-                <div className={styles.totalValue}>
-                  ${total.toLocaleString()}
+
+              {getActiveIntegrations().map(tier => (
+                <div key={tier.id} className={styles.summaryRow}>
+                  <span className={styles.summaryLabel}>
+                    {tier.name} Integration
+                  </span>
+                  <span className={styles.summaryValue}>
+                    {tier.price === 0 ? (tier.id === 'tier-a' ? 'FREE' : 'TBD') : `$${tier.price.toLocaleString()}`}
+                  </span>
                 </div>
-                <div className={styles.totalNote}>one-time</div>
+              ))}
+            </div>
+
+            <div className={styles.summaryTotal}>
+              <span className={styles.totalLabel}>Total Price</span>
+              <div className={styles.priceDisplay}>
+                <span className={styles.priceCurrency}>$</span>
+                <span className={styles.totalValue}>{total.toLocaleString()}</span>
               </div>
+              <div className={styles.totalNote}>One-time payment • No recurring fees</div>
             </div>
             
             <button className={styles.ctaButton}>

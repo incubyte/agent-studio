@@ -5,9 +5,12 @@ import { motion } from 'framer-motion';
 const useStyles = makeStyles({
   section: {
     ...shorthands.padding('80px', '0'),
-    backgroundColor: '#0f0f1a',
+    backgroundColor: '#0A0D14',
     ...shorthands.overflow('hidden'),
     position: 'relative',
+    '@media (max-width: 768px)': {
+      ...shorthands.padding('60px', '0'),
+    },
   },
 
   label: {
@@ -16,7 +19,7 @@ const useStyles = makeStyles({
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#707080',
+    color: '#64748B',
     marginBottom: '32px',
     ...shorthands.padding('0', '48px'),
   },
@@ -38,7 +41,7 @@ const useStyles = makeStyles({
     display: 'flex',
     alignItems: 'center',
     ...shorthands.gap('12px'),
-    color: '#a0a0b0',
+    color: '#94A3B8',
     fontSize: '14px',
     fontWeight: 500,
     whiteSpace: 'nowrap',
@@ -48,12 +51,12 @@ const useStyles = makeStyles({
   dot: {
     width: '4px',
     height: '4px',
-    backgroundColor: '#ff6b35',
+    backgroundColor: '#E07A3A',
     ...shorthands.borderRadius('50%'),
   },
 
   highlight: {
-    color: '#ffffff',
+    color: '#F1F5F9',
     fontWeight: 600,
   },
 });

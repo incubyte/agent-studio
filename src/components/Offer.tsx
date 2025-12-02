@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 
 const useStyles = makeStyles({
   section: {
-    ...shorthands.padding('140px', '48px'),
-    backgroundColor: '#0f0f1a',
+    ...shorthands.padding('120px', '32px'),
+    backgroundColor: '#111827',
     '@media (max-width: 768px)': {
-      ...shorthands.padding('80px', '32px'),
+      ...shorthands.padding('80px', '24px'),
     },
   },
 
@@ -26,15 +26,17 @@ const useStyles = makeStyles({
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#ff6b35',
+    color: '#E07A3A',
     marginBottom: '16px',
   },
   
   title: {
     fontSize: '48px',
     fontWeight: 700,
-    color: '#ffffff',
+    color: '#F1F5F9',
     marginBottom: '16px',
+    lineHeight: 1.1,
+    letterSpacing: '-0.02em',
     '@media (max-width: 768px)': {
       fontSize: '36px',
     },
@@ -42,10 +44,12 @@ const useStyles = makeStyles({
   
   subtitle: {
     fontSize: '20px',
-    color: '#a0a0b0',
+    color: '#94A3B8',
     maxWidth: '700px',
     marginLeft: 'auto',
     marginRight: 'auto',
+    lineHeight: 1.6,
+    fontWeight: 400,
   },
   
   grid: {
@@ -66,80 +70,61 @@ const useStyles = makeStyles({
   stepNumber: {
     width: '80px',
     height: '80px',
-    backgroundColor: 'rgba(255, 107, 53, 0.1)',
+    backgroundColor: 'rgba(224, 122, 58, 0.1)',
     ...shorthands.borderRadius('50%'),
-    ...shorthands.border('2px', 'solid', '#ff6b35'),
+    ...shorthands.border('2px', 'solid', '#E07A3A'),
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     fontSize: '32px',
     fontWeight: 700,
-    color: '#ff6b35',
+    color: '#E07A3A',
     marginLeft: 'auto',
     marginRight: 'auto',
     marginBottom: '24px',
-    position: 'relative',
-    '::before': {
-      content: '""',
-      position: 'absolute',
-      top: '-8px',
-      right: '-8px',
-      bottom: '-8px',
-      left: '-8px',
-      ...shorthands.borderRadius('50%'),
-      ...shorthands.border('1px', 'solid', 'rgba(255, 107, 53, 0.2)'),
-    },
   },
   
   stepTitle: {
     fontSize: '22px',
-    fontWeight: 700,
-    color: '#ffffff',
+    fontWeight: 600,
+    color: '#F1F5F9',
     marginBottom: '12px',
+    lineHeight: 1.3,
   },
   
   stepDescription: {
     fontSize: '16px',
     lineHeight: 1.6,
-    color: '#a0a0b0',
+    color: '#94A3B8',
+    fontWeight: 400,
   },
-  
+
   stepHighlight: {
-    color: '#ff6b35',
+    color: '#E07A3A',
     fontWeight: 600,
   },
   
   banner: {
-    backgroundColor: 'rgba(36, 36, 68, 0.8)',
-    backdropFilter: 'blur(10px)',
-    WebkitBackdropFilter: 'blur(10px)',
+    backgroundColor: 'rgba(224, 122, 58, 0.08)',
     ...shorthands.borderRadius('12px'),
     ...shorthands.padding('40px'),
     textAlign: 'center',
-    ...shorthands.border('2px', 'solid', '#ff6b35'),
-    position: 'relative',
-    overflow: 'hidden',
-    '::before': {
-      content: '""',
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      right: 0,
-      height: '4px',
-      background: 'linear-gradient(90deg, transparent, #ff6b35, transparent)',
-    },
+    ...shorthands.border('1px', 'solid', 'rgba(224, 122, 58, 0.3)'),
   },
 
   bannerText: {
     fontSize: '20px',
-    color: '#ffffff',
+    color: '#F1F5F9',
     fontWeight: 600,
     marginBottom: '8px',
+    lineHeight: 1.3,
   },
 
   bannerSubtext: {
     fontSize: '16px',
-    color: '#a0a0b0',
+    color: '#94A3B8',
+    fontWeight: 400,
+    lineHeight: 1.6,
   },
 });
 

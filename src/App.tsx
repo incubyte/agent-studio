@@ -2,7 +2,6 @@ import { FluentProvider } from '@fluentui/react-components';
 import { customTheme } from './theme';
 import { Hero } from './components/Hero';
 import { Marquee } from './components/Marquee';
-import { ClientLogos } from './components/ClientLogos';
 import { Problem } from './components/Problem';
 import { ValueEquation } from './components/ValueEquation';
 import { Offer } from './components/Offer';
@@ -30,7 +29,6 @@ function App() {
 
         {/* Dark - Social proof */}
         <Marquee />
-        <ClientLogos />
 
         {/* Light - Problem identification */}
         <Problem />
@@ -43,15 +41,21 @@ function App() {
 
         {/* Dark - Offering details */}
         <Offer />
-        <AgentCatalog />
-        <PricingCalculator />
+        <div id="catalog">
+          <AgentCatalog />
+        </div>
+        <div id="pricing">
+          <PricingCalculator />
+        </div>
 
         {/* Light - Additional value */}
         <ValueStack />
 
         {/* Dark - Process & credibility */}
         <Timeline />
-        <WhyIncubyte />
+        <div id="about">
+          <WhyIncubyte />
+        </div>
 
         {/* Dark - Social proof with photos */}
         <Testimonials />

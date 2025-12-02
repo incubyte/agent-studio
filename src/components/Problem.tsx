@@ -8,15 +8,15 @@ import {
 
 const useStyles = makeStyles({
   section: {
-    ...shorthands.padding('140px', '48px'),
-    backgroundColor: '#f5f5f7',
+    ...shorthands.padding('120px', '32px'),
+    backgroundColor: '#0F172A',
     '@media (max-width: 768px)': {
-      ...shorthands.padding('80px', '32px'),
+      ...shorthands.padding('80px', '24px'),
     },
   },
 
   container: {
-    maxWidth: '1400px',
+    maxWidth: '1200px',
     marginLeft: 'auto',
     marginRight: 'auto',
   },
@@ -27,37 +27,40 @@ const useStyles = makeStyles({
   },
 
   label: {
-    fontSize: '14px',
+    fontSize: '12px',
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#ff6b35',
+    color: '#E07A3A',
     marginBottom: '16px',
   },
 
   title: {
-    fontSize: '56px',
+    fontSize: '48px',
     fontWeight: 700,
-    color: '#303030',
+    color: '#F1F5F9',
     marginBottom: '16px',
     lineHeight: 1.1,
+    letterSpacing: '-0.02em',
     '@media (max-width: 768px)': {
       fontSize: '36px',
     },
   },
 
   subtitle: {
-    fontSize: '18px',
-    color: '#666666',
-    maxWidth: '600px',
+    fontSize: '20px',
+    color: '#94A3B8',
+    maxWidth: '700px',
     marginLeft: 'auto',
     marginRight: 'auto',
+    lineHeight: 1.6,
+    fontWeight: 400,
   },
   
   grid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 1fr)',
-    ...shorthands.gap('40px'),
+    ...shorthands.gap('24px'),
     '@media (max-width: 900px)': {
       gridTemplateColumns: '1fr',
       ...shorthands.gap('24px'),
@@ -65,43 +68,44 @@ const useStyles = makeStyles({
   },
 
   card: {
-    backgroundColor: '#ffffff',
+    backgroundColor: 'rgba(255, 255, 255, 0.03)',
     ...shorthands.borderRadius('12px'),
-    ...shorthands.padding('40px'),
-    borderTop: '4px solid #ff6b35',
-    ...shorthands.border('1px', 'solid', 'rgba(0, 0, 0, 0.08)'),
-    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
-    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+    ...shorthands.padding('32px'),
+    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
+    transition: 'background 0.2s ease, border-color 0.2s ease',
+    minHeight: '280px',
+    display: 'flex',
+    flexDirection: 'column',
     ':hover': {
-      transform: 'translateY(-8px)',
-      boxShadow: '0 12px 32px rgba(0, 0, 0, 0.12)',
+      backgroundColor: 'rgba(255, 255, 255, 0.05)',
+      borderColor: 'rgba(255, 255, 255, 0.12)',
     },
   },
 
   iconWrapper: {
-    width: '64px',
-    height: '64px',
-    backgroundColor: 'rgba(255, 107, 53, 0.1)',
-    ...shorthands.borderRadius('12px'),
+    width: '40px',
+    height: '40px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: '24px',
-    color: '#ff6b35',
+    color: '#E07A3A',
     fontSize: '32px',
   },
 
   cardTitle: {
-    fontSize: '22px',
-    fontWeight: 700,
-    color: '#303030',
-    marginBottom: '12px',
+    fontSize: '20px',
+    fontWeight: 600,
+    color: '#FFFFFF',
+    marginBottom: '24px',
+    lineHeight: 1.3,
   },
 
   cardDescription: {
     fontSize: '16px',
+    fontWeight: 400,
     lineHeight: 1.6,
-    color: '#666666',
+    color: '#94A3B8',
   },
 
   footer: {

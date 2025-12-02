@@ -5,10 +5,10 @@ import { agents, categoryInfo, type AgentCategory } from '../data/agents';
 
 const useStyles = makeStyles({
   section: {
-    ...shorthands.padding('140px', '48px'),
-    backgroundColor: '#0f0f1a',
+    ...shorthands.padding('120px', '32px'),
+    backgroundColor: '#0B1120',
     '@media (max-width: 768px)': {
-      ...shorthands.padding('80px', '32px'),
+      ...shorthands.padding('80px', '24px'),
     },
   },
 
@@ -28,24 +28,27 @@ const useStyles = makeStyles({
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#ff6b35',
+    color: '#E07A3A',
     marginBottom: '16px',
   },
-  
+
   title: {
     fontSize: '56px',
     fontWeight: 700,
-    color: '#ffffff',
+    color: '#F1F5F9',
     marginBottom: '16px',
     lineHeight: 1.1,
+    letterSpacing: '-0.02em',
     '@media (max-width: 768px)': {
       fontSize: '36px',
     },
   },
-  
+
   subtitle: {
     fontSize: '18px',
-    color: '#a0a0b0',
+    color: '#94A3B8',
+    lineHeight: 1.6,
+    fontWeight: 400,
   },
   
   tabs: {
@@ -62,23 +65,24 @@ const useStyles = makeStyles({
     ...shorthands.gap('8px'),
     ...shorthands.padding('12px', '20px'),
     ...shorthands.borderRadius('8px'),
-    ...shorthands.border('2px', 'solid', '#2a2a4e'),
+    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.1)'),
     backgroundColor: 'transparent',
-    color: '#a0a0b0',
+    color: '#94A3B8',
     fontSize: '14px',
     fontWeight: 600,
     cursor: 'pointer',
     transition: 'all 0.2s ease',
     ':hover': {
-      ...shorthands.borderColor('#ff6b35'),
-      color: '#ffffff',
+      ...shorthands.borderColor('rgba(255, 255, 255, 0.2)'),
+      color: '#F1F5F9',
+      backgroundColor: 'rgba(255, 255, 255, 0.03)',
     },
   },
-  
+
   tabActive: {
-    backgroundColor: '#ff6b35',
-    ...shorthands.borderColor('#ff6b35'),
-    color: '#ffffff',
+    backgroundColor: 'rgba(224, 122, 58, 0.1)',
+    ...shorthands.borderColor('rgba(224, 122, 58, 0.3)'),
+    color: '#F1F5F9',
   },
   
   tabIcon: {
@@ -92,44 +96,44 @@ const useStyles = makeStyles({
   },
   
   card: {
-    backgroundColor: 'rgba(26, 26, 46, 0.7)',
-    backdropFilter: 'blur(10px)',
-    WebkitBackdropFilter: 'blur(10px)',
+    backgroundColor: 'rgba(255, 255, 255, 0.03)',
     ...shorthands.borderRadius('12px'),
     ...shorthands.padding('24px'),
-    borderLeft: '4px solid',
-    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.05)'),
-    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+    borderLeft: '3px solid',
+    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
+    transition: 'background 0.2s ease, border-color 0.2s ease',
     cursor: 'pointer',
     ':hover': {
-      transform: 'translateY(-4px)',
-      boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
-      backgroundColor: 'rgba(26, 26, 46, 0.9)',
+      backgroundColor: 'rgba(255, 255, 255, 0.05)',
+      borderColor: 'rgba(255, 255, 255, 0.12)',
     },
   },
-  
+
   cardName: {
     fontSize: '16px',
     fontWeight: 600,
-    color: '#ffffff',
+    color: '#F1F5F9',
     marginBottom: '8px',
+    lineHeight: 1.3,
   },
-  
+
   cardDescription: {
     fontSize: '14px',
-    lineHeight: 1.5,
-    color: '#a0a0b0',
+    lineHeight: 1.6,
+    color: '#94A3B8',
+    fontWeight: 400,
   },
   
   count: {
     textAlign: 'center',
     marginTop: '32px',
     fontSize: '14px',
-    color: '#707080',
+    color: '#64748B',
+    fontWeight: 400,
   },
-  
+
   countHighlight: {
-    color: '#ff6b35',
+    color: '#E07A3A',
     fontWeight: 600,
   },
 });
@@ -174,10 +178,6 @@ export function AgentCatalog() {
                 key={category}
                 className={`${styles.tab} ${activeCategory === category ? styles.tabActive : ''}`}
                 onClick={() => setActiveCategory(category)}
-                style={{
-                  borderColor: activeCategory === category ? catInfo.color : undefined,
-                  backgroundColor: activeCategory === category ? catInfo.color : undefined,
-                }}
               >
                 <span className={styles.tabIcon}>{catInfo.icon}</span>
                 {catInfo.label}

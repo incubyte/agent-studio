@@ -5,55 +5,62 @@ import { MagneticButton } from './MagneticButton';
 
 const useStyles = makeStyles({
   hero: {
-    minHeight: '108vh',
+    minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    ...shorthands.padding('40px', '48px'),
+    ...shorthands.padding('24px', '32px', '120px', '32px'),
     position: 'relative',
     overflow: 'hidden',
+    backgroundColor: '#0A0D14',
+    '@media (max-width: 768px)': {
+      ...shorthands.padding('16px', '24px', '80px', '24px'),
+    },
   },
 
-  backgroundImage: {
+  backgroundGradient: {
     position: 'absolute',
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
+    background: 'radial-gradient(ellipse 80% 50% at 50% 0%, rgba(17, 24, 39, 1) 0%, rgba(10, 13, 20, 1) 100%)',
+    pointerEvents: 'none',
+  },
+
+  gridPattern: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)`,
+    backgroundSize: '48px 48px',
+    pointerEvents: 'none',
+  },
+
+  heroVisual: {
+    position: 'absolute',
+    bottom: '-10%',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    width: '120%',
+    maxWidth: '1400px',
+    height: '60%',
     backgroundImage: 'url(/orbs.png)',
     backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    backgroundPosition: 'center top',
+    opacity: 0.4,
     pointerEvents: 'none',
     '::after': {
       content: '""',
       position: 'absolute',
       inset: 0,
-      background: 'linear-gradient(180deg, rgba(26, 31, 58, 0.75) 0%, rgba(15, 15, 26, 0.85) 100%)',
+      background: 'linear-gradient(180deg, rgba(10, 13, 20, 0.9) 0%, rgba(10, 13, 20, 1) 100%)',
     },
-  },
-
-  background: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    background: 'radial-gradient(ellipse at 30% 20%, rgba(0, 212, 255, 0.15) 0%, transparent 50%), radial-gradient(ellipse at 70% 40%, rgba(255, 140, 66, 0.12) 0%, transparent 50%)',
-    pointerEvents: 'none',
-    zIndex: 1,
-  },
-
-  backgroundBottom: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    height: '50%',
-    background: 'linear-gradient(180deg, transparent 0%, rgba(0, 212, 255, 0.08) 100%)',
-    pointerEvents: 'none',
-    zIndex: 1,
   },
 
   content: {
@@ -63,86 +70,85 @@ const useStyles = makeStyles({
     width: '100%',
   },
 
+  nav: {
+    position: 'relative',
+    zIndex: 2,
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    maxWidth: '1200px',
+    width: '100%',
+    marginBottom: '60px',
+    '@media (max-width: 768px)': {
+      marginBottom: '40px',
+    },
+  },
+
+  logo: {
+    fontSize: '20px',
+    fontWeight: 700,
+    color: '#F1F5F9',
+    letterSpacing: '-0.01em',
+  },
+
+  navLinks: {
+    display: 'flex',
+    ...shorthands.gap('32px'),
+    alignItems: 'center',
+    '@media (max-width: 768px)': {
+      display: 'none',
+    },
+  },
+
+  navLink: {
+    fontSize: '14px',
+    color: '#94A3B8',
+    textDecoration: 'none',
+    fontWeight: 500,
+    transition: 'color 0.2s ease',
+    ':hover': {
+      color: '#F1F5F9',
+    },
+  },
+
   heroContent: {
     textAlign: 'center',
+    position: 'relative',
+    zIndex: 1,
   },
 
-  announcement: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    ...shorthands.gap('12px'),
-    ...shorthands.padding('10px', '24px'),
-    backgroundColor: 'rgba(255, 255, 255, 0.05)',
-    backdropFilter: 'blur(10px)',
-    WebkitBackdropFilter: 'blur(10px)',
-    ...shorthands.borderRadius('24px'),
-    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.1)'),
-    marginBottom: '32px',
-    fontSize: '14px',
-    color: '#a0a0b0',
-  },
-
-  announcementDot: {
-    width: '8px',
-    height: '8px',
-    backgroundColor: '#4caf50',
-    ...shorthands.borderRadius('50%'),
-    boxShadow: '0 0 10px rgba(76, 175, 80, 0.6)',
-  },
-
-  badge: {
-    display: 'inline-block',
-    fontSize: '14px',
-    fontWeight: 600,
-    letterSpacing: '3px',
-    textTransform: 'uppercase',
-    color: '#ff6b35',
-    marginBottom: '24px',
-    ...shorthands.padding('8px', '16px'),
-    backgroundColor: 'rgba(255, 107, 53, 0.1)',
-    ...shorthands.borderRadius('4px'),
-  },
 
   title: {
-    fontSize: '84px',
-    fontWeight: 900,
-    lineHeight: 0.95,
+    fontSize: '72px',
+    fontWeight: 700,
+    lineHeight: 1.05,
     letterSpacing: '-0.02em',
     marginBottom: '24px',
-    color: '#ffffff',
+    color: '#F1F5F9',
     '@media (max-width: 768px)': {
-      fontSize: '56px',
+      fontSize: '48px',
       ...shorthands.padding('0', '16px'),
     },
   },
 
   titleRotating: {
     display: 'inline-block',
-    color: '#ff6b35',
+    color: '#E07A3A',
     minWidth: '400px',
     '@media (max-width: 768px)': {
       minWidth: '280px',
     },
   },
-  
+
   subtitle: {
     fontSize: '24px',
-    lineHeight: 1.7,
-    color: '#a0a0b0',
+    lineHeight: 1.5,
+    color: '#94A3B8',
     marginBottom: '48px',
-    maxWidth: '700px',
+    maxWidth: '800px',
     marginLeft: 'auto',
     marginRight: 'auto',
-  },
-
-  accentBar: {
-    width: '80px',
-    height: '4px',
-    backgroundColor: '#ff6b35',
-    ...shorthands.borderRadius('2px'),
-    marginBottom: '48px',
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    fontWeight: 400,
   },
 
   cta: {
@@ -153,70 +159,74 @@ const useStyles = makeStyles({
   },
 
   button: {
-    backgroundColor: '#ff6b35',
-    color: '#ffffff',
+    backgroundColor: '#E07A3A',
+    color: '#0B1120',
     fontWeight: 600,
-    fontSize: '20px',
-    ...shorthands.padding('20px', '40px'),
-    ...shorthands.borderRadius('6px'),
+    fontSize: '16px',
+    ...shorthands.padding('16px', '32px'),
+    ...shorthands.borderRadius('8px'),
     ...shorthands.border('none'),
     cursor: 'pointer',
-    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-    boxShadow: '0 4px 20px rgba(255, 107, 53, 0.4), 0 0 50px rgba(255, 107, 53, 0.2), 0 0 100px rgba(255, 107, 53, 0.1)',
+    transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+    boxShadow: '0 4px 12px rgba(224, 122, 58, 0.25)',
     ':hover': {
-      backgroundColor: '#ff8555',
       transform: 'translateY(-2px) scale(1.02)',
-      boxShadow: '0 6px 30px rgba(255, 107, 53, 0.6), 0 0 70px rgba(255, 107, 53, 0.3), 0 0 120px rgba(255, 107, 53, 0.15)',
+      boxShadow: '0 6px 20px rgba(224, 122, 58, 0.3)',
     },
     ':focus-visible': {
-      outline: '2px solid #ff6b35',
+      outline: '2px solid #E07A3A',
       outlineOffset: '2px',
     },
   },
 
   buttonSecondary: {
     backgroundColor: 'transparent',
-    color: '#ff6b35',
+    color: '#F1F5F9',
     fontWeight: 600,
-    fontSize: '18px',
-    ...shorthands.padding('18px', '36px'),
-    ...shorthands.borderRadius('6px'),
-    ...shorthands.border('2px', 'solid', '#ff6b35'),
+    fontSize: '16px',
+    ...shorthands.padding('16px', '32px'),
+    ...shorthands.borderRadius('8px'),
+    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.2)'),
     cursor: 'pointer',
-    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+    transition: 'all 0.2s ease',
     ':hover': {
-      backgroundColor: 'rgba(255, 107, 53, 0.1)',
-      transform: 'translateY(-2px)',
+      backgroundColor: 'rgba(255, 255, 255, 0.05)',
+      ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.3)'),
+      transform: 'scale(1.02)',
     },
     ':focus-visible': {
-      outline: '2px solid #ff6b35',
+      outline: '2px solid #F1F5F9',
       outlineOffset: '2px',
     },
   },
   
-  stats: {
+  trustIndicators: {
     display: 'flex',
     ...shorthands.gap('48px'),
     justifyContent: 'center',
-    marginTop: '80px',
+    marginTop: '64px',
     flexWrap: 'wrap',
+    alignItems: 'center',
   },
 
   stat: {
     textAlign: 'center',
+    opacity: 0.7,
   },
 
   statValue: {
-    fontSize: '48px',
-    fontWeight: 700,
-    color: '#ff6b35',
+    fontSize: '32px',
+    fontWeight: 600,
+    color: '#F1F5F9',
+    lineHeight: 1,
   },
 
   statLabel: {
-    fontSize: '14px',
-    color: '#707080',
+    fontSize: '12px',
+    color: '#64748B',
     textTransform: 'uppercase',
     letterSpacing: '1px',
+    marginTop: '4px',
   },
 
 });
@@ -261,9 +271,19 @@ export function Hero() {
 
   return (
     <section className={styles.hero}>
-      <div className={styles.backgroundImage} />
-      <div className={styles.background} />
-      <div className={styles.backgroundBottom} />
+      <div className={styles.backgroundGradient} />
+      <div className={styles.gridPattern} />
+      <div className={styles.heroVisual} />
+
+      {/* Navigation */}
+      <nav className={styles.nav}>
+        <div className={styles.logo}>Agent Studio</div>
+        <div className={styles.navLinks}>
+          <a href="#catalog" className={styles.navLink}>Catalog</a>
+          <a href="#pricing" className={styles.navLink}>Pricing</a>
+          <a href="#about" className={styles.navLink}>About</a>
+        </div>
+      </nav>
 
       <motion.div
         className={styles.content}
@@ -273,30 +293,11 @@ export function Hero() {
         style={prefersReducedMotion ? {} : { opacity, scale }}
       >
         <div className={styles.heroContent}>
-          <motion.div
-            className={styles.announcement}
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: prefersReducedMotion ? 0 : 0.1, duration: prefersReducedMotion ? 0 : 0.6 }}
-          >
-            <div className={styles.announcementDot} />
-            <span>Serving 140+ enterprise clients worldwide</span>
-          </motion.div>
-
-          <motion.span
-            className={styles.badge}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: prefersReducedMotion ? 0 : 0.2 }}
-          >
-            Incubyte Agent Studio
-          </motion.span>
-
           <motion.h1
             className={styles.title}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: prefersReducedMotion ? 0 : 0.3, duration: prefersReducedMotion ? 0 : 0.6 }}
+            transition={{ delay: prefersReducedMotion ? 0 : 0.1, duration: prefersReducedMotion ? 0 : 0.6 }}
           >
             AI Agents.<br />
             <span className={styles.titleRotating}>
@@ -314,13 +315,11 @@ export function Hero() {
             </span>
           </motion.h1>
 
-          <div className={styles.accentBar} />
-
           <motion.p
             className={styles.subtitle}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: prefersReducedMotion ? 0 : 0.5 }}
+            transition={{ delay: prefersReducedMotion ? 0 : 0.2 }}
           >
             Production-ready AI agents deployed to your infrastructure in weeks, not months.
             Predictable pricing. Full ownership. No lock-in.
@@ -330,7 +329,7 @@ export function Hero() {
             className={styles.cta}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: prefersReducedMotion ? 0 : 0.7 }}
+            transition={{ delay: prefersReducedMotion ? 0 : 0.3 }}
           >
             <MagneticButton className={styles.button}>
               Build Your Agent →
@@ -341,10 +340,10 @@ export function Hero() {
           </motion.div>
 
           <motion.div
-            className={styles.stats}
+            className={styles.trustIndicators}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: prefersReducedMotion ? 0 : 1 }}
+            transition={{ delay: prefersReducedMotion ? 0 : 0.5 }}
           >
             <div className={styles.stat}>
               <div className={styles.statValue}>50+</div>

@@ -3,46 +3,53 @@ import { motion } from 'framer-motion';
 
 const useStyles = makeStyles({
   section: {
-    ...shorthands.padding('100px', '24px'),
-    backgroundColor: '#1a1a2e',
+    ...shorthands.padding('120px', '32px'),
+    backgroundColor: '#111827',
+    '@media (max-width: 768px)': {
+      ...shorthands.padding('80px', '24px'),
+    },
   },
-  
+
   container: {
     maxWidth: '1200px',
     marginLeft: 'auto',
     marginRight: 'auto',
   },
-  
+
   header: {
     textAlign: 'center',
     marginBottom: '64px',
   },
-  
+
   label: {
-    fontSize: '14px',
+    fontSize: '12px',
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#ff6b35',
+    color: '#E07A3A',
     marginBottom: '16px',
   },
-  
+
   title: {
     fontSize: '48px',
     fontWeight: 700,
-    color: '#ffffff',
+    color: '#F1F5F9',
     marginBottom: '16px',
+    lineHeight: 1.1,
+    letterSpacing: '-0.02em',
     '@media (max-width: 768px)': {
       fontSize: '36px',
     },
   },
-  
+
   subtitle: {
-    fontSize: '18px',
-    color: '#a0a0b0',
-    maxWidth: '600px',
+    fontSize: '20px',
+    color: '#94A3B8',
+    maxWidth: '700px',
     marginLeft: 'auto',
     marginRight: 'auto',
+    lineHeight: 1.6,
+    fontWeight: 400,
   },
   
   grid: {
@@ -58,20 +65,21 @@ const useStyles = makeStyles({
   },
   
   card: {
-    backgroundColor: '#0f0f1a',
-    ...shorthands.borderRadius('16px'),
-    ...shorthands.padding('28px'),
-    transition: 'all 0.3s ease',
+    backgroundColor: 'rgba(255, 255, 255, 0.03)',
+    ...shorthands.borderRadius('12px'),
+    ...shorthands.padding('32px'),
+    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
+    transition: 'background 0.2s ease, border-color 0.2s ease',
     ':hover': {
-      transform: 'translateY(-4px)',
-      boxShadow: '0 16px 32px rgba(0, 0, 0, 0.3)',
+      backgroundColor: 'rgba(255, 255, 255, 0.05)',
+      borderColor: 'rgba(255, 255, 255, 0.12)',
     },
   },
-  
+
   iconWrapper: {
     width: '56px',
     height: '56px',
-    backgroundColor: 'rgba(255, 107, 53, 0.15)',
+    backgroundColor: 'rgba(224, 122, 58, 0.15)',
     ...shorthands.borderRadius('12px'),
     display: 'flex',
     alignItems: 'center',
@@ -82,17 +90,89 @@ const useStyles = makeStyles({
   
   cardTitle: {
     fontSize: '18px',
-    fontWeight: 700,
-    color: '#ffffff',
-    marginBottom: '10px',
+    fontWeight: 600,
+    color: '#F1F5F9',
+    marginBottom: '12px',
+    lineHeight: 1.3,
   },
-  
+
   cardDescription: {
-    fontSize: '15px',
+    fontSize: '16px',
     lineHeight: 1.6,
-    color: '#a0a0b0',
+    color: '#94A3B8',
+    fontWeight: 400,
   },
   
+  comparisonSection: {
+    marginTop: '80px',
+  },
+
+  comparisonHeader: {
+    textAlign: 'center',
+    marginBottom: '48px',
+  },
+
+  comparisonTitle: {
+    fontSize: '32px',
+    fontWeight: 700,
+    color: '#F1F5F9',
+    marginBottom: '16px',
+    lineHeight: 1.2,
+  },
+
+  comparisonSubtitle: {
+    fontSize: '18px',
+    color: '#94A3B8',
+    fontWeight: 400,
+  },
+
+  comparisonTable: {
+    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
+    ...shorthands.borderRadius('12px'),
+    overflow: 'hidden',
+  },
+
+  comparisonRow: {
+    display: 'grid',
+    gridTemplateColumns: '2fr 1fr 1fr',
+    borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+    ':last-child': {
+      borderBottom: 'none',
+    },
+    '@media (max-width: 768px)': {
+      gridTemplateColumns: '1.5fr 1fr 1fr',
+    },
+  },
+
+  comparisonCell: {
+    ...shorthands.padding('20px', '24px'),
+    fontSize: '15px',
+    lineHeight: 1.5,
+    '@media (max-width: 768px)': {
+      ...shorthands.padding('16px', '16px'),
+      fontSize: '14px',
+    },
+  },
+
+  cellFeature: {
+    color: '#94A3B8',
+    backgroundColor: 'rgba(255, 255, 255, 0.02)',
+    fontWeight: 500,
+  },
+
+  cellOthers: {
+    color: '#EF4444',
+    textAlign: 'center',
+    fontWeight: 500,
+  },
+
+  cellUs: {
+    color: '#2DD4BF',
+    textAlign: 'center',
+    backgroundColor: 'rgba(45, 212, 191, 0.05)',
+    fontWeight: 600,
+  },
+
   stats: {
     marginTop: '64px',
     display: 'flex',
@@ -100,24 +180,27 @@ const useStyles = makeStyles({
     ...shorthands.gap('64px'),
     flexWrap: 'wrap',
     ...shorthands.padding('32px'),
-    backgroundColor: '#0f0f1a',
-    ...shorthands.borderRadius('16px'),
+    backgroundColor: 'rgba(255, 255, 255, 0.03)',
+    ...shorthands.borderRadius('12px'),
+    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
   },
-  
+
   stat: {
     textAlign: 'center',
   },
-  
-  statValue: {
-    fontSize: '42px',
-    fontWeight: 800,
-    color: '#ff6b35',
+
+  statNumber: {
+    fontSize: '48px',
+    fontWeight: 700,
+    color: '#F1F5F9',
+    lineHeight: 1,
   },
-  
+
   statLabel: {
     fontSize: '14px',
-    color: '#707080',
-    marginTop: '4px',
+    color: '#94A3B8',
+    marginTop: '8px',
+    fontWeight: 400,
   },
 });
 
@@ -161,6 +244,15 @@ const stats = [
   { value: '15+', label: 'Industries Served' },
 ];
 
+const comparisons = [
+  { feature: 'Pricing Model', others: 'T&M, scope creep', us: 'Fixed price, upfront' },
+  { feature: 'Delivery Timeline', others: '3-6 months', us: '2-4 weeks' },
+  { feature: 'Code Ownership', others: 'Locked in, no access', us: 'Full source code' },
+  { feature: 'Infrastructure', others: 'Their cloud only', us: 'Your infra, your choice' },
+  { feature: 'Compliance Ready', others: 'Extra cost, delays', us: 'Built-in (HIPAA, SOC 2)' },
+  { feature: 'Support After Launch', others: 'Pay per incident', us: '30-day warranty included' },
+];
+
 export function WhyIncubyte() {
   const styles = useStyles();
   
@@ -199,7 +291,7 @@ export function WhyIncubyte() {
           ))}
         </div>
         
-        <motion.div 
+        <motion.div
           className={styles.stats}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -208,11 +300,67 @@ export function WhyIncubyte() {
         >
           {stats.map((stat) => (
             <div key={stat.label} className={styles.stat}>
-              <div className={styles.statValue}>{stat.value}</div>
+              <div className={styles.statNumber}>{stat.value}</div>
               <div className={styles.statLabel}>{stat.label}</div>
             </div>
           ))}
         </motion.div>
+
+        <div className={styles.comparisonSection}>
+          <motion.div
+            className={styles.comparisonHeader}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h3 className={styles.comparisonTitle}>How We're Different</h3>
+            <p className={styles.comparisonSubtitle}>
+              Clear advantages that matter for enterprise AI deployment
+            </p>
+          </motion.div>
+
+          <motion.div
+            className={styles.comparisonTable}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
+            <div className={styles.comparisonRow}>
+              <div className={`${styles.comparisonCell} ${styles.cellFeature}`}>
+                <strong>Feature</strong>
+              </div>
+              <div className={`${styles.comparisonCell} ${styles.cellOthers}`}>
+                <strong>Others</strong>
+              </div>
+              <div className={`${styles.comparisonCell} ${styles.cellUs}`}>
+                <strong>Us</strong>
+              </div>
+            </div>
+
+            {comparisons.map((comparison, index) => (
+              <motion.div
+                key={comparison.feature}
+                className={styles.comparisonRow}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05, duration: 0.4 }}
+              >
+                <div className={`${styles.comparisonCell} ${styles.cellFeature}`}>
+                  {comparison.feature}
+                </div>
+                <div className={`${styles.comparisonCell} ${styles.cellOthers}`}>
+                  {comparison.others}
+                </div>
+                <div className={`${styles.comparisonCell} ${styles.cellUs}`}>
+                  {comparison.us}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   );

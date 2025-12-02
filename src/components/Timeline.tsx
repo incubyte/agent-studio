@@ -3,138 +3,132 @@ import { motion } from 'framer-motion';
 
 const useStyles = makeStyles({
   section: {
-    ...shorthands.padding('100px', '24px'),
-    backgroundColor: '#0f0f1a',
+    ...shorthands.padding('120px', '32px'),
+    backgroundColor: '#111827',
+    '@media (max-width: 768px)': {
+      ...shorthands.padding('80px', '24px'),
+    },
   },
-  
+
   container: {
-    maxWidth: '1000px',
+    maxWidth: '1200px',
     marginLeft: 'auto',
     marginRight: 'auto',
   },
-  
+
   header: {
     textAlign: 'center',
     marginBottom: '64px',
   },
-  
+
   label: {
-    fontSize: '14px',
+    fontSize: '12px',
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#ff6b35',
+    color: '#E07A3A',
     marginBottom: '16px',
   },
-  
+
   title: {
     fontSize: '48px',
     fontWeight: 700,
-    color: '#ffffff',
+    color: '#F1F5F9',
     marginBottom: '16px',
+    lineHeight: 1.1,
+    letterSpacing: '-0.02em',
     '@media (max-width: 768px)': {
       fontSize: '36px',
     },
   },
-  
+
   subtitle: {
-    fontSize: '18px',
-    color: '#a0a0b0',
+    fontSize: '20px',
+    color: '#94A3B8',
+    maxWidth: '700px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    lineHeight: 1.6,
+    fontWeight: 400,
   },
   
   timeline: {
     position: 'relative',
-    ...shorthands.padding('0', '0', '0', '48px'),
-    '@media (max-width: 600px)': {
-      ...shorthands.padding('0', '0', '0', '32px'),
-    },
+    borderLeft: '2px solid rgba(255, 255, 255, 0.1)',
+    ...shorthands.padding('0', '0', '0', '32px'),
+    marginLeft: '8px',
   },
-  
-  line: {
-    position: 'absolute',
-    left: '12px',
-    top: '0',
-    bottom: '0',
-    width: '4px',
-    background: 'linear-gradient(180deg, #ff6b35 0%, #7209b7 50%, #4361ee 100%)',
-    ...shorthands.borderRadius('2px'),
-  },
-  
+
   step: {
     position: 'relative',
-    marginBottom: '40px',
+    paddingBottom: '48px',
     ':last-child': {
-      marginBottom: 0,
+      paddingBottom: 0,
     },
   },
-  
-  stepDot: {
+
+  stepNode: {
     position: 'absolute',
-    left: '-44px',
+    left: '-38px',
     top: '4px',
-    width: '24px',
-    height: '24px',
-    backgroundColor: '#ff6b35',
+    width: '16px',
+    height: '16px',
+    backgroundColor: '#111827',
+    ...shorthands.border('2px', 'solid', '#E07A3A'),
     ...shorthands.borderRadius('50%'),
-    ...shorthands.border('4px', 'solid', '#0f0f1a'),
-    '@media (max-width: 600px)': {
-      left: '-28px',
-      width: '20px',
-      height: '20px',
-    },
+  },
+
+  stepNodeCompleted: {
+    backgroundColor: '#E07A3A',
   },
   
   stepContent: {
-    backgroundColor: '#1a1a2e',
-    ...shorthands.borderRadius('16px'),
-    ...shorthands.padding('24px', '28px'),
-    transition: 'all 0.3s ease',
-    ':hover': {
-      transform: 'translateX(8px)',
-      boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
-    },
+    display: 'flex',
+    flexDirection: 'column',
+    ...shorthands.gap('8px'),
   },
-  
+
   stepHeader: {
     display: 'flex',
     alignItems: 'center',
-    ...shorthands.gap('16px'),
-    marginBottom: '12px',
+    ...shorthands.gap('12px'),
     flexWrap: 'wrap',
   },
-  
+
   stepWeek: {
-    backgroundColor: '#ff6b35',
-    color: '#ffffff',
     fontSize: '12px',
-    fontWeight: 700,
-    ...shorthands.padding('6px', '12px'),
-    ...shorthands.borderRadius('4px'),
+    fontWeight: 600,
+    color: '#E07A3A',
     textTransform: 'uppercase',
-    letterSpacing: '1px',
+    letterSpacing: '0.5px',
   },
-  
+
   stepTitle: {
-    fontSize: '20px',
-    fontWeight: 700,
-    color: '#ffffff',
+    fontSize: '18px',
+    fontWeight: 600,
+    color: '#F1F5F9',
+    lineHeight: 1.3,
   },
-  
+
   stepDescription: {
     fontSize: '15px',
     lineHeight: 1.6,
-    color: '#a0a0b0',
+    color: '#94A3B8',
+    fontWeight: 400,
+    maxWidth: '600px',
   },
   
   footer: {
     textAlign: 'center',
-    marginTop: '48px',
+    marginTop: '64px',
     fontSize: '16px',
-    color: '#707080',
+    color: '#94A3B8',
+    lineHeight: 1.6,
+    fontWeight: 400,
   },
-  
+
   footerHighlight: {
-    color: '#ff6b35',
+    color: '#E07A3A',
     fontWeight: 600,
   },
 });
@@ -188,25 +182,23 @@ export function Timeline() {
         </motion.div>
         
         <div className={styles.timeline}>
-          <div className={styles.line} />
-          
           {timelineSteps.map((step, index) => (
-            <motion.div 
+            <motion.div
               key={step.week}
               className={styles.step}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.15, duration: 0.5 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
             >
-              <div className={styles.stepDot} style={{
-                backgroundColor: index === timelineSteps.length - 1 ? '#4361ee' : '#ff6b35',
-              }} />
+              <div
+                className={`${styles.stepNode} ${
+                  index < 3 ? styles.stepNodeCompleted : ''
+                }`}
+              />
               <div className={styles.stepContent}>
                 <div className={styles.stepHeader}>
-                  <span className={styles.stepWeek} style={{
-                    backgroundColor: index === timelineSteps.length - 1 ? '#4361ee' : '#ff6b35',
-                  }}>{step.week}</span>
+                  <span className={styles.stepWeek}>{step.week}</span>
                   <h3 className={styles.stepTitle}>{step.title}</h3>
                 </div>
                 <p className={styles.stepDescription}>{step.description}</p>

@@ -1,143 +1,101 @@
 import { makeStyles, shorthands } from '@fluentui/react-components';
 import { motion } from 'framer-motion';
-import { MagneticButton } from './MagneticButton';
 
 const useStyles = makeStyles({
   section: {
-    ...shorthands.padding('140px', '48px'),
-    backgroundColor: '#1a1a2e',
+    background: 'linear-gradient(180deg, #0F172A 0%, #0B1120 100%)',
+    ...shorthands.padding('120px', '32px'),
+    textAlign: 'center',
     position: 'relative',
-    overflow: 'hidden',
     '@media (max-width: 768px)': {
-      ...shorthands.padding('80px', '32px'),
+      ...shorthands.padding('80px', '24px'),
     },
-  },
-
-  background: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    background: 'radial-gradient(ellipse at 50% 100%, rgba(255, 107, 53, 0.3) 0%, transparent 60%)',
-    pointerEvents: 'none',
+    '::before': {
+      content: '""',
+      position: 'absolute',
+      top: 0,
+      left: '50%',
+      transform: 'translateX(-50%)',
+      width: '300px',
+      height: '1px',
+      background: 'linear-gradient(90deg, transparent, rgba(224, 122, 58, 0.3), transparent)',
+    },
   },
   
   container: {
-    maxWidth: '800px',
+    maxWidth: '700px',
     marginLeft: 'auto',
     marginRight: 'auto',
-    textAlign: 'center',
     position: 'relative',
     zIndex: 1,
   },
-  
-  label: {
-    fontSize: '14px',
-    fontWeight: 600,
-    letterSpacing: '2px',
-    textTransform: 'uppercase',
-    color: '#ff6b35',
-    marginBottom: '16px',
-  },
-  
+
   title: {
     fontSize: '56px',
-    fontWeight: 800,
-    color: '#ffffff',
+    fontWeight: 700,
+    color: '#F1F5F9',
     marginBottom: '24px',
     lineHeight: 1.1,
+    letterSpacing: '-0.02em',
     '@media (max-width: 768px)': {
       fontSize: '40px',
     },
   },
-  
+
   subtitle: {
     fontSize: '20px',
-    color: '#a0a0b0',
+    color: '#94A3B8',
     marginBottom: '48px',
-    maxWidth: '600px',
-    marginLeft: 'auto',
-    marginRight: 'auto',
     lineHeight: 1.6,
+    fontWeight: 400,
   },
   
-  cta: {
+  ctaButtons: {
     display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
     ...shorthands.gap('16px'),
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-    marginBottom: '48px',
+    marginBottom: '32px',
   },
-  
-  button: {
-    backgroundColor: '#ff6b35',
-    color: '#ffffff',
+
+  primaryButton: {
+    backgroundColor: '#E07A3A',
+    color: '#0B1120',
     fontWeight: 600,
     fontSize: '18px',
-    ...shorthands.padding('20px', '40px'),
-    ...shorthands.borderRadius('6px'),
+    ...shorthands.padding('18px', '48px'),
+    ...shorthands.borderRadius('8px'),
     ...shorthands.border('none'),
     cursor: 'pointer',
-    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-    boxShadow: '0 0 0 rgba(255, 107, 53, 0)',
+    transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+    boxShadow: '0 4px 12px rgba(224, 122, 58, 0.25)',
     ':hover': {
-      backgroundColor: '#ff8555',
-      transform: 'translateY(-3px)',
-      boxShadow: '0 10px 40px rgba(255, 107, 53, 0.5)',
+      transform: 'translateY(-2px) scale(1.02)',
+      boxShadow: '0 6px 20px rgba(224, 122, 58, 0.3)',
     },
     ':focus-visible': {
-      outline: '2px solid #ff6b35',
+      outline: '2px solid #E07A3A',
       outlineOffset: '2px',
     },
   },
 
-  buttonSecondary: {
-    backgroundColor: 'transparent',
-    color: '#ffffff',
-    fontWeight: 600,
-    fontSize: '18px',
-    ...shorthands.padding('20px', '40px'),
-    ...shorthands.borderRadius('6px'),
-    ...shorthands.border('2px', 'solid', '#ffffff'),
+  secondaryLink: {
+    fontSize: '16px',
+    color: '#94A3B8',
+    fontWeight: 500,
+    textDecoration: 'none',
     cursor: 'pointer',
-    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+    transition: 'color 0.2s ease',
     ':hover': {
-      backgroundColor: 'rgba(255, 255, 255, 0.1)',
-      transform: 'translateY(-3px)',
-    },
-    ':focus-visible': {
-      outline: '2px solid #ffffff',
-      outlineOffset: '2px',
+      color: '#F1F5F9',
     },
   },
 
-  guarantee: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    ...shorthands.gap('12px'),
-    backgroundColor: 'rgba(76, 175, 80, 0.1)',
-    ...shorthands.padding('16px', '24px'),
-    ...shorthands.borderRadius('8px'),
-    ...shorthands.border('1px', 'solid', 'rgba(76, 175, 80, 0.3)'),
-  },
-
-  guaranteeBadge: {
-    width: '6px',
-    height: '6px',
-    backgroundColor: '#4caf50',
-    ...shorthands.borderRadius('50%'),
-    boxShadow: '0 0 10px rgba(76, 175, 80, 0.6)',
-  },
-  
-  guaranteeText: {
-    fontSize: '15px',
-    color: '#a0a0b0',
-  },
-  
-  guaranteeHighlight: {
-    color: '#4caf50',
-    fontWeight: 600,
+  note: {
+    fontSize: '14px',
+    color: '#64748B',
+    lineHeight: 1.6,
+    fontWeight: 400,
   },
 });
 
@@ -146,8 +104,6 @@ export function CTA() {
   
   return (
     <section className={styles.section}>
-      <div className={styles.background} />
-      
       <div className={styles.container}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -155,30 +111,26 @@ export function CTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className={styles.label}>Get Started</p>
           <h2 className={styles.title}>
-            Ready to Ship AI<br />That Actually Works?
+            Ready to Ship AI That Actually Works?
           </h2>
           <p className={styles.subtitle}>
-            Book a 30-minute call to discuss your use case. We'll tell you honestly 
-            if we're a good fit — and if not, we'll point you in the right direction.
+            Book a 30-minute discovery call. We'll tell you honestly if we're a good fit
+            — and if not, point you in the right direction.
           </p>
-          
-          <div className={styles.cta}>
-            <MagneticButton className={styles.button}>
-              Book a Call →
-            </MagneticButton>
-            <MagneticButton className={styles.buttonSecondary}>
-              View Agent Catalog
-            </MagneticButton>
+
+          <div className={styles.ctaButtons}>
+            <button className={styles.primaryButton}>
+              Book Your Discovery Call →
+            </button>
+            <a href="#" className={styles.secondaryLink}>
+              Or schedule a call at your convenience
+            </a>
           </div>
-          
-          <div className={styles.guarantee}>
-            <div className={styles.guaranteeBadge} />
-            <span className={styles.guaranteeText}>
-              <span className={styles.guaranteeHighlight}>Risk-free discovery:</span> If we find it's not a fit, we'll tell you. No pressure to proceed.
-            </span>
-          </div>
+
+          <p className={styles.note}>
+            No pressure. No sales pitch. Just an honest conversation about your needs.
+          </p>
         </motion.div>
       </div>
     </section>

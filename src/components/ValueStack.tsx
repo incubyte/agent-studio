@@ -7,10 +7,10 @@ import {
 
 const useStyles = makeStyles({
   section: {
-    ...shorthands.padding('140px', '48px'),
-    backgroundColor: '#f5f5f7',
+    ...shorthands.padding('120px', '32px'),
+    backgroundColor: '#0B1120',
     '@media (max-width: 768px)': {
-      ...shorthands.padding('80px', '32px'),
+      ...shorthands.padding('80px', '24px'),
     },
   },
 
@@ -26,128 +26,144 @@ const useStyles = makeStyles({
   },
 
   label: {
-    fontSize: '14px',
+    fontSize: '12px',
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#ff6b35',
+    color: '#E07A3A',
     marginBottom: '16px',
   },
 
   title: {
-    fontSize: '56px',
+    fontSize: '48px',
     fontWeight: 700,
-    color: '#303030',
+    color: '#F1F5F9',
     marginBottom: '16px',
     lineHeight: 1.1,
+    letterSpacing: '-0.02em',
     '@media (max-width: 768px)': {
       fontSize: '36px',
     },
+  },
+
+  subtitle: {
+    fontSize: '20px',
+    color: '#94A3B8',
+    maxWidth: '700px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    lineHeight: 1.6,
+    fontWeight: 400,
   },
   
   grid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(2, 1fr)',
-    ...shorthands.gap('24px'),
+    ...shorthands.gap('16px'),
     marginBottom: '48px',
     '@media (max-width: 700px)': {
       gridTemplateColumns: '1fr',
     },
   },
-  
-  card: {
-    backgroundColor: '#ffffff',
-    ...shorthands.borderRadius('12px'),
-    ...shorthands.padding('24px'),
+
+  featureItem: {
     display: 'flex',
-    alignItems: 'flex-start',
     ...shorthands.gap('16px'),
-    ...shorthands.border('1px', 'solid', 'rgba(0, 0, 0, 0.08)'),
-    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
-    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+    alignItems: 'flex-start',
+    ...shorthands.padding('24px'),
+    backgroundColor: 'rgba(255, 255, 255, 0.02)',
+    ...shorthands.borderRadius('12px'),
+    ...shorthands.border('1px', 'solid', 'transparent'),
+    transition: 'border-color 0.2s ease',
     ':hover': {
-      ...shorthands.borderColor('#ff6b35'),
-      transform: 'translateY(-4px)',
-      boxShadow: '0 8px 24px rgba(0, 0, 0, 0.1)',
+      borderColor: 'rgba(255, 255, 255, 0.08)',
     },
   },
-  
-  iconWrapper: {
-    width: '48px',
-    height: '48px',
-    backgroundColor: 'rgba(255, 107, 53, 0.1)',
-    ...shorthands.borderRadius('12px'),
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexShrink: 0,
-  },
-  
-  checkIcon: {
-    color: '#ff6b35',
-    fontSize: '24px',
-  },
-  
-  cardContent: {
-    flexGrow: 1,
-  },
-  
-  cardTitle: {
-    fontSize: '18px',
-    fontWeight: 600,
-    color: '#303030',
-    marginBottom: '8px',
-  },
 
-  cardDescription: {
-    fontSize: '14px',
-    lineHeight: 1.6,
-    color: '#666666',
-  },
-
-  guarantee: {
-    backgroundColor: '#ffffff',
-    ...shorthands.borderRadius('12px'),
-    ...shorthands.padding('32px'),
-    display: 'flex',
-    alignItems: 'center',
-    ...shorthands.gap('24px'),
-    ...shorthands.border('2px', 'solid', '#4caf50'),
-    boxShadow: '0 4px 16px rgba(76, 175, 80, 0.15)',
-    '@media (max-width: 600px)': {
-      flexDirection: 'column',
-      textAlign: 'center',
-    },
-  },
-  
-  guaranteeIcon: {
-    width: '80px',
-    height: '80px',
-    backgroundColor: 'rgba(76, 175, 80, 0.1)',
+  featureCheck: {
+    width: '24px',
+    height: '24px',
+    backgroundColor: 'rgba(45, 212, 191, 0.1)',
     ...shorthands.borderRadius('50%'),
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     flexShrink: 0,
-    color: '#4caf50',
-    fontSize: '40px',
   },
-  
-  guaranteeContent: {
+
+  checkIcon: {
+    color: '#2DD4BF',
+    fontSize: '14px',
+  },
+
+  featureContent: {
     flexGrow: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    ...shorthands.gap('6px'),
   },
-  
-  guaranteeTitle: {
-    fontSize: '22px',
-    fontWeight: 700,
-    color: '#4caf50',
-    marginBottom: '8px',
-  },
-  
-  guaranteeText: {
+
+  featureTitle: {
     fontSize: '16px',
+    fontWeight: 600,
+    color: '#F1F5F9',
+    lineHeight: 1.3,
+  },
+
+  featureDescription: {
+    fontSize: '14px',
     lineHeight: 1.6,
-    color: '#666666',
+    color: '#94A3B8',
+    fontWeight: 400,
+  },
+
+  highlightedBox: {
+    backgroundColor: 'rgba(45, 212, 191, 0.05)',
+    ...shorthands.borderRadius('12px'),
+    ...shorthands.padding('32px'),
+    display: 'flex',
+    alignItems: 'center',
+    ...shorthands.gap('24px'),
+    ...shorthands.border('1px', 'solid', 'rgba(45, 212, 191, 0.2)'),
+    '@media (max-width: 600px)': {
+      flexDirection: 'column',
+      textAlign: 'center',
+      ...shorthands.gap('16px'),
+    },
+  },
+
+  highlightedIcon: {
+    width: '56px',
+    height: '56px',
+    backgroundColor: 'rgba(45, 212, 191, 0.15)',
+    ...shorthands.borderRadius('50%'),
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexShrink: 0,
+    color: '#2DD4BF',
+    fontSize: '28px',
+  },
+
+  highlightedContent: {
+    flexGrow: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    ...shorthands.gap('8px'),
+  },
+
+  highlightedTitle: {
+    fontSize: '18px',
+    fontWeight: 600,
+    color: '#2DD4BF',
+    lineHeight: 1.3,
+  },
+
+  highlightedText: {
+    fontSize: '15px',
+    lineHeight: 1.6,
+    color: '#94A3B8',
+    fontWeight: 400,
   },
 });
 
@@ -192,7 +208,7 @@ export function ValueStack() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <motion.div 
+        <motion.div
           className={styles.header}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -201,43 +217,46 @@ export function ValueStack() {
         >
           <p className={styles.label}>What's Included</p>
           <h2 className={styles.title}>Everything You Need to Succeed</h2>
+          <p className={styles.subtitle}>
+            From deployment to documentation, we provide comprehensive support for your AI agent implementation
+          </p>
         </motion.div>
         
         <div className={styles.grid}>
           {valueItems.map((item, index) => (
-            <motion.div 
+            <motion.div
               key={item.title}
-              className={styles.card}
+              className={styles.featureItem}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05, duration: 0.4 }}
             >
-              <div className={styles.iconWrapper}>
+              <div className={styles.featureCheck}>
                 <CheckmarkCircleFilled className={styles.checkIcon} />
               </div>
-              <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>{item.title}</h3>
-                <p className={styles.cardDescription}>{item.description}</p>
+              <div className={styles.featureContent}>
+                <h3 className={styles.featureTitle}>{item.title}</h3>
+                <p className={styles.featureDescription}>{item.description}</p>
               </div>
             </motion.div>
           ))}
         </div>
-        
-        <motion.div 
-          className={styles.guarantee}
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+
+        <motion.div
+          className={styles.highlightedBox}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.5 }}
         >
-          <div className={styles.guaranteeIcon}>
+          <div className={styles.highlightedIcon}>
             <ShieldCheckmarkFilled />
           </div>
-          <div className={styles.guaranteeContent}>
-            <h3 className={styles.guaranteeTitle}>Risk Reversal Guarantee</h3>
-            <p className={styles.guaranteeText}>
-              If we find it's not a fit during discovery, we'll tell you. No pressure to proceed. 
+          <div className={styles.highlightedContent}>
+            <h3 className={styles.highlightedTitle}>Risk Reversal Guarantee</h3>
+            <p className={styles.highlightedText}>
+              If we find it's not a fit during discovery, we'll tell you. No pressure to proceed.
               We'd rather lose a deal than deliver something that doesn't solve your problem.
             </p>
           </div>

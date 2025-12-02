@@ -3,51 +3,53 @@ import { motion } from 'framer-motion';
 
 const useStyles = makeStyles({
   section: {
-    ...shorthands.padding('140px', '48px'),
-    backgroundColor: '#f5f5f7',
+    ...shorthands.padding('120px', '32px'),
+    backgroundColor: '#111827',
     '@media (max-width: 768px)': {
-      ...shorthands.padding('80px', '32px'),
+      ...shorthands.padding('80px', '24px'),
     },
   },
 
   container: {
-    maxWidth: '1400px',
+    maxWidth: '1200px',
     marginLeft: 'auto',
     marginRight: 'auto',
   },
 
   header: {
     textAlign: 'center',
-    marginBottom: '80px',
+    marginBottom: '64px',
   },
 
   label: {
-    fontSize: '14px',
+    fontSize: '12px',
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#ff6b35',
+    color: '#E07A3A',
     marginBottom: '16px',
   },
 
   title: {
-    fontSize: '56px',
+    fontSize: '48px',
     fontWeight: 700,
-    color: '#303030',
+    color: '#F1F5F9',
     marginBottom: '16px',
     lineHeight: 1.1,
+    letterSpacing: '-0.02em',
     '@media (max-width: 768px)': {
       fontSize: '36px',
     },
   },
 
   subtitle: {
-    fontSize: '18px',
-    color: '#666666',
+    fontSize: '20px',
+    color: '#94A3B8',
     maxWidth: '700px',
     marginLeft: 'auto',
     marginRight: 'auto',
-    lineHeight: 1.7,
+    lineHeight: 1.6,
+    fontWeight: 400,
   },
 
   grid: {
@@ -69,19 +71,27 @@ const useStyles = makeStyles({
     ...shorthands.gap('24px'),
   },
 
+  demoContainer: {
+    background: 'linear-gradient(180deg, #111827 0%, #0B1120 100%)',
+    ...shorthands.padding('80px', '40px'),
+    ...shorthands.borderRadius('16px'),
+    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.05)'),
+    '@media (max-width: 768px)': {
+      ...shorthands.padding('40px', '24px'),
+    },
+  },
+
   imageWrapper: {
     position: 'relative',
     width: '100%',
     aspectRatio: '16/10',
-    ...shorthands.borderRadius('16px'),
+    ...shorthands.borderRadius('12px'),
     overflow: 'hidden',
-    backgroundColor: '#1a1a2e',
-    boxShadow: '0 30px 90px rgba(0, 0, 0, 0.25), 0 10px 40px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.1)',
-    ...shorthands.border('1px', 'solid', 'rgba(0, 0, 0, 0.08)'),
-    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.1)'),
+    boxShadow: '0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05)',
+    transition: 'transform 0.3s ease',
     ':hover': {
-      transform: 'translateY(-12px) scale(1.02)',
-      boxShadow: '0 50px 120px rgba(0, 0, 0, 0.35), 0 20px 60px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.1)',
+      transform: 'translateY(-4px)',
     },
   },
 
@@ -93,27 +103,27 @@ const useStyles = makeStyles({
     alignItems: 'center',
     justifyContent: 'center',
     ...shorthands.gap('16px'),
-    ...shorthands.padding('32px'),
-    background: 'linear-gradient(135deg, #1a1a2e 0%, #242444 100%)',
+    ...shorthands.padding('48px', '32px'),
+    background: 'linear-gradient(135deg, #1F2937 0%, #111827 100%)',
   },
 
   placeholderIcon: {
-    width: '60px',
-    height: '60px',
-    backgroundColor: 'rgba(255, 107, 53, 0.1)',
+    width: '64px',
+    height: '64px',
+    backgroundColor: 'rgba(224, 122, 58, 0.15)',
     ...shorthands.borderRadius('12px'),
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    color: '#ff6b35',
+    color: '#E07A3A',
     fontSize: '32px',
-    fontWeight: 700,
   },
 
   placeholderText: {
     fontSize: '14px',
-    color: '#a0a0b0',
+    color: '#64748B',
     textAlign: 'center',
+    fontWeight: 400,
   },
 
   mockupImage: {
@@ -127,16 +137,81 @@ const useStyles = makeStyles({
   },
 
   cardTitle: {
-    fontSize: '22px',
-    fontWeight: 700,
-    color: '#303030',
+    fontSize: '20px',
+    fontWeight: 600,
+    color: '#F1F5F9',
     marginBottom: '8px',
   },
 
   cardDescription: {
     fontSize: '16px',
-    color: '#666666',
+    color: '#94A3B8',
     lineHeight: 1.6,
+  },
+
+  // Tab/Toggle styling for future use
+  demoTabs: {
+    display: 'flex',
+    ...shorthands.gap('8px'),
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    ...shorthands.padding('4px'),
+    ...shorthands.borderRadius('8px'),
+    marginBottom: '24px',
+  },
+
+  demoTab: {
+    ...shorthands.padding('8px', '16px'),
+    ...shorthands.borderRadius('6px'),
+    fontSize: '14px',
+    color: '#94A3B8',
+    backgroundColor: 'transparent',
+    ...shorthands.border('none'),
+    cursor: 'pointer',
+    transition: 'background 0.2s ease, color 0.2s ease',
+    fontWeight: 500,
+    ':hover': {
+      color: '#F1F5F9',
+      backgroundColor: 'rgba(255, 255, 255, 0.05)',
+    },
+  },
+
+  demoTabActive: {
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    color: '#F1F5F9',
+  },
+
+  // Optional browser chrome frame for context
+  browserChrome: {
+    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+    ...shorthands.padding('12px', '16px'),
+    ...shorthands.borderRadius('12px', '12px', '0', '0'),
+    display: 'flex',
+    alignItems: 'center',
+    ...shorthands.gap('8px'),
+    ...shorthands.borderBottom('1px', 'solid', 'rgba(255, 255, 255, 0.1)'),
+  },
+
+  chromeDots: {
+    display: 'flex',
+    ...shorthands.gap('6px'),
+  },
+
+  chromeDot: {
+    width: '10px',
+    height: '10px',
+    ...shorthands.borderRadius('50%'),
+    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+  },
+
+  chromeAddress: {
+    flex: 1,
+    marginLeft: '12px',
+    ...shorthands.padding('4px', '12px'),
+    ...shorthands.borderRadius('4px'),
+    backgroundColor: 'rgba(0, 0, 0, 0.2)',
+    fontSize: '12px',
+    color: '#64748B',
+    fontWeight: 400,
   },
 });
 
@@ -191,23 +266,25 @@ export function ProductShowcase() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.15, duration: 0.5 }}
             >
-              <div className={styles.imageWrapper}>
-                {item.mockup ? (
-                  <img
-                    src={item.mockup}
-                    alt={item.title}
-                    className={styles.mockupImage}
-                  />
-                ) : (
-                  <div className={styles.mockupPlaceholder}>
-                    <div className={styles.placeholderIcon}>
-                      {item.icon}
+              <div className={styles.demoContainer}>
+                <div className={styles.imageWrapper}>
+                  {item.mockup ? (
+                    <img
+                      src={item.mockup}
+                      alt={item.title}
+                      className={styles.mockupImage}
+                    />
+                  ) : (
+                    <div className={styles.mockupPlaceholder}>
+                      <div className={styles.placeholderIcon}>
+                        {item.icon}
+                      </div>
+                      <div className={styles.placeholderText}>
+                        Product screenshot coming soon
+                      </div>
                     </div>
-                    <div className={styles.placeholderText}>
-                      Product screenshot coming soon
-                    </div>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
 
               <div className={styles.cardContent}>

@@ -3,17 +3,17 @@ import { motion } from 'framer-motion';
 
 const useStyles = makeStyles({
   section: {
-    ...shorthands.padding('80px', '48px'),
-    backgroundColor: '#0f0f1a',
-    borderTop: '1px solid rgba(255, 255, 255, 0.05)',
-    borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
+    ...shorthands.padding('80px', '32px'),
+    backgroundColor: '#111827',
+    borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+    borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
     '@media (max-width: 768px)': {
-      ...shorthands.padding('60px', '32px'),
+      ...shorthands.padding('60px', '24px'),
     },
   },
 
   container: {
-    maxWidth: '1400px',
+    maxWidth: '1200px',
     marginLeft: 'auto',
     marginRight: 'auto',
   },
@@ -24,67 +24,41 @@ const useStyles = makeStyles({
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#707080',
+    color: '#64748B',
     marginBottom: '48px',
   },
 
-  logoGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-    ...shorthands.gap('48px', '64px'),
+  logoBar: {
+    display: 'flex',
     alignItems: 'center',
-    justifyItems: 'center',
+    justifyContent: 'center',
+    ...shorthands.gap('48px'),
+    flexWrap: 'wrap',
+    opacity: 0.6,
     '@media (max-width: 768px)': {
-      gridTemplateColumns: 'repeat(2, 1fr)',
-      ...shorthands.gap('32px', '40px'),
-    },
-  },
-
-  logoWrapper: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-    height: '60px',
-    ...shorthands.padding('16px'),
-    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-    cursor: 'pointer',
-    ':hover': {
-      transform: 'scale(1.05)',
-    },
-  },
-
-  logoPlaceholder: {
-    width: '160px',
-    height: '60px',
-    backgroundColor: 'rgba(255, 255, 255, 0.08)',
-    ...shorthands.borderRadius('8px'),
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontSize: '14px',
-    fontWeight: 600,
-    color: '#707080',
-    textAlign: 'center',
-    ...shorthands.padding('12px'),
-    transition: 'all 0.3s ease',
-    ':hover': {
-      backgroundColor: 'rgba(255, 255, 255, 0.12)',
-      color: '#a0a0b0',
+      ...shorthands.gap('32px'),
     },
   },
 
   logo: {
-    maxWidth: '160px',
-    maxHeight: '60px',
+    height: '32px',
     width: 'auto',
-    height: 'auto',
-    filter: 'grayscale(100%) opacity(0.7)',
-    transition: 'filter 0.3s ease, transform 0.3s ease',
-    ':hover': {
-      filter: 'grayscale(0%) opacity(1)',
-      transform: 'scale(1.05)',
-    },
+    filter: 'grayscale(100%) brightness(200%)',
+    objectFit: 'contain',
+  },
+
+  logoPlaceholder: {
+    height: '32px',
+    ...shorthands.padding('8px', '24px'),
+    backgroundColor: 'rgba(255, 255, 255, 0.03)',
+    ...shorthands.borderRadius('6px'),
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '13px',
+    fontWeight: 500,
+    color: 'rgba(255, 255, 255, 0.5)',
+    letterSpacing: '0.5px',
   },
 });
 
@@ -113,30 +87,28 @@ export function ClientLogos() {
           Trusted by Leading Enterprises
         </motion.div>
 
-        <div className={styles.logoGrid}>
-          {clientLogos.map((client, index) => (
-            <motion.div
-              key={client.name}
-              className={styles.logoWrapper}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-            >
-              {client.logo ? (
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  className={styles.logo}
-                />
-              ) : (
-                <div className={styles.logoPlaceholder}>
-                  {client.name}
-                </div>
-              )}
-            </motion.div>
+        <motion.div
+          className={styles.logoBar}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          {clientLogos.map((client) => (
+            client.logo ? (
+              <img
+                key={client.name}
+                src={client.logo}
+                alt={client.name}
+                className={styles.logo}
+              />
+            ) : (
+              <div key={client.name} className={styles.logoPlaceholder}>
+                {client.name}
+              </div>
+            )
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

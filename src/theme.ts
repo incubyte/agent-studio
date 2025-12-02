@@ -39,26 +39,33 @@ export const customTheme = {
 };
 
 export const colors = {
-  primary: '#1a1a2e',
-  primaryLight: '#242444',
-  accent: '#ff6b35',
-  accentLight: '#ff8555',
-  accentGradientStart: '#ff6b35',
-  accentGradientEnd: '#ff8555',
-  surface: '#0f0f1a',
-  surfaceLight: '#1a1a2e',
-  surfaceDarkest: '#0a0a12',
-  backgroundLight: '#f5f5f7',
-  backgroundLightSecondary: '#ffffff',
-  text: '#ffffff',
-  textMuted: '#a0a0b0',
-  textDim: '#707080',
-  textDark: '#303030',
-  textDarkMuted: '#666666',
-  success: '#4caf50',
-  support: '#4361ee',
-  marketing: '#7209b7',
-  hr: '#f72585',
-  finance: '#4cc9f0',
-  sales: '#ff6b35',
+  // Primary backgrounds
+  background: '#0A0D14',
+  backgroundSecondary: '#111827',
+  backgroundTertiary: '#0B1120',
+
+  // Accent colors
+  accent: '#E07A3A',
+  accentSecondary: '#64748B',
+
+  // Text colors
+  text: '#F1F5F9',
+  textSecondary: '#94A3B8',
+  textMuted: '#64748B',
+
+  // Highlight colors
+  success: '#2DD4BF',
+
+  // Light backgrounds (for inverted sections)
+  backgroundLight: '#F8FAFC',
+  backgroundLightSecondary: '#F1F5F9',
+  textDark: '#0F172A',
+  textDarkSecondary: '#475569',
+
+  // Legacy category colors (keep for agent catalog)
+  support: '#3B82F6',
+  marketing: '#8B5CF6',
+  hr: '#EC4899',
+  finance: '#06B6D4',
+  sales: '#E07A3A',
 };

@@ -3,43 +3,53 @@ import { motion } from 'framer-motion';
 
 const useStyles = makeStyles({
   section: {
-    ...shorthands.padding('100px', '24px'),
-    backgroundColor: '#0f0f1a',
+    ...shorthands.padding('120px', '32px'),
+    backgroundColor: '#0F172A',
+    '@media (max-width: 768px)': {
+      ...shorthands.padding('80px', '24px'),
+    },
   },
-  
+
   container: {
-    maxWidth: '1100px',
+    maxWidth: '1200px',
     marginLeft: 'auto',
     marginRight: 'auto',
   },
-  
+
   header: {
     textAlign: 'center',
     marginBottom: '64px',
   },
-  
+
   label: {
-    fontSize: '14px',
+    fontSize: '12px',
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#ff6b35',
+    color: '#E07A3A',
     marginBottom: '16px',
   },
   
   title: {
     fontSize: '48px',
     fontWeight: 700,
-    color: '#ffffff',
+    color: '#F1F5F9',
     marginBottom: '16px',
+    lineHeight: 1.1,
+    letterSpacing: '-0.02em',
     '@media (max-width: 768px)': {
       fontSize: '36px',
     },
   },
-  
+
   subtitle: {
     fontSize: '20px',
-    color: '#a0a0b0',
+    color: '#94A3B8',
+    maxWidth: '700px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    lineHeight: 1.6,
+    fontWeight: 400,
   },
   
   steps: {
@@ -55,45 +65,46 @@ const useStyles = makeStyles({
   
   connector: {
     position: 'absolute',
-    top: '80px',
-    left: '25%',
-    right: '25%',
-    height: '4px',
-    background: 'linear-gradient(90deg, #ff6b35 0%, #ff8555 50%, #ff6b35 100%)',
-    ...shorthands.borderRadius('2px'),
+    top: '32px',
+    left: 'calc(16.67% + 32px)',
+    right: 'calc(16.67% + 32px)',
+    height: '1px',
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
     '@media (max-width: 900px)': {
       display: 'none',
     },
   },
   
   step: {
-    backgroundColor: '#1a1a2e',
-    ...shorthands.borderRadius('20px'),
+    backgroundColor: 'rgba(255, 255, 255, 0.03)',
+    ...shorthands.borderRadius('12px'),
     ...shorthands.padding('32px'),
+    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
     textAlign: 'center',
     position: 'relative',
     zIndex: 1,
-    transition: 'all 0.3s ease',
+    transition: 'background 0.2s ease, border-color 0.2s ease',
     ':hover': {
-      transform: 'translateY(-8px)',
-      boxShadow: '0 20px 40px rgba(255, 107, 53, 0.15)',
+      backgroundColor: 'rgba(255, 255, 255, 0.05)',
+      borderColor: 'rgba(255, 255, 255, 0.12)',
     },
   },
   
   stepNumber: {
     width: '64px',
     height: '64px',
-    backgroundColor: '#ff6b35',
+    ...shorthands.border('2px', 'solid', '#E07A3A'),
     ...shorthands.borderRadius('50%'),
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     fontSize: '28px',
     fontWeight: 700,
-    color: '#ffffff',
+    color: '#E07A3A',
     marginLeft: 'auto',
     marginRight: 'auto',
     marginBottom: '24px',
+    backgroundColor: '#0F172A',
   },
   
   stepIcon: {
@@ -102,39 +113,43 @@ const useStyles = makeStyles({
   },
   
   stepTitle: {
-    fontSize: '22px',
-    fontWeight: 700,
-    color: '#ffffff',
+    fontSize: '20px',
+    fontWeight: 600,
+    color: '#F1F5F9',
     marginBottom: '12px',
+    lineHeight: 1.3,
   },
-  
+
   stepDescription: {
     fontSize: '16px',
     lineHeight: 1.6,
-    color: '#a0a0b0',
+    color: '#94A3B8',
+    fontWeight: 400,
   },
   
   footer: {
     textAlign: 'center',
     marginTop: '64px',
   },
-  
+
   footerBanner: {
     display: 'inline-block',
-    backgroundColor: '#242444',
+    backgroundColor: 'rgba(224, 122, 58, 0.08)',
     ...shorthands.padding('20px', '40px'),
-    ...shorthands.borderRadius('12px'),
-    ...shorthands.border('2px', 'solid', '#ff6b35'),
+    ...shorthands.borderRadius('8px'),
+    ...shorthands.border('1px', 'solid', 'rgba(224, 122, 58, 0.3)'),
   },
-  
+
   footerText: {
-    fontSize: '18px',
-    fontWeight: 600,
-    color: '#ffffff',
+    fontSize: '16px',
+    fontWeight: 400,
+    color: '#94A3B8',
+    lineHeight: 1.6,
   },
-  
+
   footerAccent: {
-    color: '#ff6b35',
+    color: '#E07A3A',
+    fontWeight: 600,
   },
 });
 
