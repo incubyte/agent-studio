@@ -11,12 +11,12 @@ const useStyles = makeStyles({
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    ...shorthands.padding('24px', '32px', '120px', '32px'),
+    ...shorthands.padding('80px', '32px', '120px', '32px'),
     position: 'relative',
     overflow: 'hidden',
     backgroundColor: '#0A0D14',
     '@media (max-width: 768px)': {
-      ...shorthands.padding('16px', '24px', '80px', '24px'),
+      ...shorthands.padding('72px', '24px', '80px', '24px'),
     },
   },
 
@@ -71,17 +71,31 @@ const useStyles = makeStyles({
   },
 
   nav: {
-    position: 'relative',
-    zIndex: 2,
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 1000,
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    maxWidth: '1200px',
-    width: '100%',
-    marginBottom: '60px',
+    ...shorthands.padding('20px', '32px'),
+    backgroundColor: 'rgba(10, 13, 20, 0.95)',
+    backdropFilter: 'blur(10px)',
+    borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
     '@media (max-width: 768px)': {
-      marginBottom: '40px',
+      ...shorthands.padding('16px', '24px'),
     },
+  },
+
+  navContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    maxWidth: '1200px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
 
   logo: {
@@ -277,11 +291,13 @@ export function Hero() {
 
       {/* Navigation */}
       <nav className={styles.nav}>
-        <div className={styles.logo}>Agent Studio</div>
-        <div className={styles.navLinks}>
-          <a href="#catalog" className={styles.navLink}>Catalog</a>
-          <a href="#pricing" className={styles.navLink}>Pricing</a>
-          <a href="#about" className={styles.navLink}>About</a>
+        <div className={styles.navContainer}>
+          <div className={styles.logo}>Agent Studio</div>
+          <div className={styles.navLinks}>
+            <a href="#catalog" className={styles.navLink}>Catalog</a>
+            <a href="#pricing" className={styles.navLink}>Pricing</a>
+            <a href="#about" className={styles.navLink}>About</a>
+          </div>
         </div>
       </nav>
 
