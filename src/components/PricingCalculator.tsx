@@ -393,7 +393,7 @@ export function PricingCalculator() {
             {/* Agent Count */}
             <div className={styles.configSection}>
               <h3 className={styles.configTitle}>
-                🤖 Number of Agents
+                Number of Agents
               </h3>
               <div className={styles.sliderWrapper}>
                 <div className={styles.sliderLabel}>

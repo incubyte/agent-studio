@@ -1,5 +1,13 @@
 import { makeStyles, shorthands } from '@fluentui/react-components';
 import { motion } from 'framer-motion';
+import {
+  PeopleTeamRegular,
+  ShieldCheckmarkRegular,
+  CodeRegular,
+  SparkleRegular,
+  GlobeRegular,
+  ArrowTrendingRegular,
+} from '@fluentui/react-icons';
 
 const useStyles = makeStyles({
   section: {
@@ -87,7 +95,8 @@ const useStyles = makeStyles({
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: '20px',
-    fontSize: '28px',
+    color: '#E07A3A',
+    fontSize: '32px',
   },
   
   cardTitle: {
@@ -208,32 +217,32 @@ const useStyles = makeStyles({
 
 const differentiators = [
   {
-    icon: '👥',
+    icon: <PeopleTeamRegular />,
     title: '140+ Engineers',
     description: 'Deep expertise in AI, software architecture, and regulated industries.',
   },
   {
-    icon: '🏥',
+    icon: <ShieldCheckmarkRegular />,
     title: 'Healthcare & Compliance DNA',
     description: 'HIPAA, SOX, SOC 2 experience built in. We understand regulated environments.',
   },
   {
-    icon: '⚡',
+    icon: <CodeRegular />,
     title: 'Software Craftsmanship',
     description: 'TDD, pair programming, CI/CD. Quality isn\'t negotiable — it\'s how we work.',
   },
   {
-    icon: '🤖',
+    icon: <SparkleRegular />,
     title: 'AI-Native Since 2023',
     description: 'Production AI systems, not experiments. Battle-tested patterns that work.',
   },
   {
-    icon: '🌍',
+    icon: <GlobeRegular />,
     title: 'Global Team, US Standards',
     description: 'Timezone-flexible delivery with US-quality communication and engineering practices.',
   },
   {
-    icon: '📈',
+    icon: <ArrowTrendingRegular />,
     title: 'Scale When Ready',
     description: 'Start with one agent. Add more as you see results. No long-term commitments.',
   },
@@ -286,7 +295,9 @@ export function WhyIncubyte() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
             >
-              <div className={styles.iconWrapper}>{item.icon}</div>
+              <div className={styles.iconWrapper}>
+                {item.icon}
+              </div>
               <h3 className={styles.cardTitle}>{item.title}</h3>
               <p className={styles.cardDescription}>{item.description}</p>
             </motion.div>
