@@ -73,10 +73,12 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     ...shorthands.gap('24px'),
-    transition: 'background 0.2s ease, border-color 0.2s ease',
+    transitionProperty: 'background, border-color',
+    transitionDuration: '0.2s',
+    transitionTimingFunction: 'ease',
     ':hover': {
       backgroundColor: 'rgba(255, 255, 255, 0.04)',
-      borderColor: 'rgba(255, 255, 255, 0.12)',
+      ...shorthands.borderColor('rgba(255, 255, 255, 0.12)'),
     },
   },
 
@@ -127,7 +129,7 @@ const useStyles = makeStyles({
     color: '#F1F5F9',
   },
 
-  title: {
+  authorTitle: {
     fontSize: '14px',
     color: '#94A3B8',
     fontWeight: 400,
@@ -206,7 +208,7 @@ export function Testimonials() {
                 )}
                 <div className={styles.authorInfo}>
                   <div className={styles.name}>{testimonial.name}</div>
-                  <div className={styles.title}>{testimonial.title}</div>
+                  <div className={styles.authorTitle}>{testimonial.title}</div>
                 </div>
               </div>
             </motion.div>

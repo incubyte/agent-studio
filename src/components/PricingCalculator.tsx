@@ -134,14 +134,16 @@ const useStyles = makeStyles({
     ...shorthands.padding('16px'),
     ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
     cursor: 'pointer',
-    transition: 'border-color 0.2s ease, background 0.2s ease',
+    transitionProperty: 'border-color, background',
+    transitionDuration: '0.2s',
+    transitionTimingFunction: 'ease',
     ':hover': {
-      borderColor: 'rgba(255, 255, 255, 0.12)',
+      ...shorthands.borderColor('rgba(255, 255, 255, 0.12)'),
     },
   },
 
   tierCardActive: {
-    borderColor: '#E07A3A',
+    ...shorthands.borderColor('#E07A3A'),
     backgroundColor: 'rgba(224, 122, 58, 0.05)',
   },
   

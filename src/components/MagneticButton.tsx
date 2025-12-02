@@ -1,18 +1,16 @@
-import { useState, useRef, MouseEvent } from 'react';
+import { useState, useRef, type MouseEvent } from 'react';
 import { motion } from 'framer-motion';
 
 interface MagneticButtonProps {
   children: React.ReactNode;
   className?: string;
   onClick?: () => void;
-  variant?: 'primary' | 'secondary';
 }
 
 export function MagneticButton({
   children,
   className = '',
   onClick,
-  variant = 'primary'
 }: MagneticButtonProps) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const buttonRef = useRef<HTMLButtonElement>(null);

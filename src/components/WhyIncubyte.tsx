@@ -69,10 +69,12 @@ const useStyles = makeStyles({
     ...shorthands.borderRadius('12px'),
     ...shorthands.padding('32px'),
     ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
-    transition: 'background 0.2s ease, border-color 0.2s ease',
+    transitionProperty: 'background, border-color',
+    transitionDuration: '0.2s',
+    transitionTimingFunction: 'ease',
     ':hover': {
       backgroundColor: 'rgba(255, 255, 255, 0.05)',
-      borderColor: 'rgba(255, 255, 255, 0.12)',
+      ...shorthands.borderColor('rgba(255, 255, 255, 0.12)'),
     },
   },
 
