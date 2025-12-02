@@ -1,0 +1,6 @@
+<svg width="140" height="48" viewBox="0 0 140 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Financial Services Logo -->
+  <rect x="2" y="8" width="32" height="32" rx="16" fill="#8B5CF6"/>
+  <path d="M18 18L24 24L18 30M14 24H24" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="42" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#1E293B">FinanceX</text>
+</svg>

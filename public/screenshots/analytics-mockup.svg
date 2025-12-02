@@ -1,0 +1,154 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Analytics Dashboard Mockup -->
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#0F172A"/>
+
+  <!-- Header Bar -->
+  <rect width="800" height="60" fill="#1E293B"/>
+  <text x="24" y="38" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#F1F5F9">Analytics & Insights</text>
+
+  <!-- Date Range Selector -->
+  <rect x="620" y="18" width="150" height="24" rx="12" fill="#334155" stroke="#475569" stroke-width="1"/>
+  <text x="635" y="34" font-family="Arial, sans-serif" font-size="12" fill="#94A3B8">Last 30 Days</text>
+  <path d="M755 27 L760 30 L755 33" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Main Content -->
+  <g transform="translate(24, 80)">
+    <!-- Key Metrics -->
+    <g>
+      <!-- Metric 1 -->
+      <rect width="180" height="80" rx="8" fill="#1E293B"/>
+      <text x="16" y="24" font-family="Arial, sans-serif" font-size="12" fill="#94A3B8">Total Conversations</text>
+      <text x="16" y="52" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#F1F5F9">24,581</text>
+      <g transform="translate(16, 60)">
+        <path d="M0 8 L8 4 L16 6 L24 2 L32 5 L40 0" stroke="#10B981" stroke-width="2" fill="none"/>
+      </g>
+
+      <!-- Metric 2 -->
+      <g transform="translate(200, 0)">
+        <rect width="180" height="80" rx="8" fill="#1E293B"/>
+        <text x="16" y="24" font-family="Arial, sans-serif" font-size="12" fill="#94A3B8">Resolution Rate</text>
+        <text x="16" y="52" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#F1F5F9">94.2%</text>
+        <g transform="translate(16, 60)">
+          <path d="M0 4 L8 6 L16 2 L24 4 L32 0 L40 2" stroke="#10B981" stroke-width="2" fill="none"/>
+        </g>
+      </g>
+
+      <!-- Metric 3 -->
+      <g transform="translate(400, 0)">
+        <rect width="180" height="80" rx="8" fill="#1E293B"/>
+        <text x="16" y="24" font-family="Arial, sans-serif" font-size="12" fill="#94A3B8">User Satisfaction</text>
+        <text x="16" y="52" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#F1F5F9">4.8/5.0</text>
+        <g transform="translate(16, 60)">
+          <path d="M0 6 L8 3 L16 5 L24 1 L32 3 L40 0" stroke="#10B981" stroke-width="2" fill="none"/>
+        </g>
+      </g>
+
+      <!-- Metric 4 -->
+      <g transform="translate(600, 0)">
+        <rect width="152" height="80" rx="8" fill="#1E293B"/>
+        <text x="16" y="24" font-family="Arial, sans-serif" font-size="12" fill="#94A3B8">ROI Impact</text>
+        <text x="16" y="52" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#10B981">+$127K</text>
+        <text x="16" y="68" font-family="Arial, sans-serif" font-size="11" fill="#64748B">saved this month</text>
+      </g>
+    </g>
+
+    <!-- Line Chart -->
+    <g transform="translate(0, 110)">
+      <rect width="500" height="260" rx="8" fill="#1E293B"/>
+      <text x="16" y="28" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#F1F5F9">Conversation Volume Trend</text>
+
+      <!-- Chart Area -->
+      <g transform="translate(40, 60)">
+        <!-- Y-axis labels -->
+        <text x="-10" y="5" font-family="Arial, sans-serif" font-size="10" fill="#64748B" text-anchor="end">2K</text>
+        <text x="-10" y="50" font-family="Arial, sans-serif" font-size="10" fill="#64748B" text-anchor="end">1.5K</text>
+        <text x="-10" y="100" font-family="Arial, sans-serif" font-size="10" fill="#64748B" text-anchor="end">1K</text>
+        <text x="-10" y="150" font-family="Arial, sans-serif" font-size="10" fill="#64748B" text-anchor="end">500</text>
+
+        <!-- Grid lines -->
+        <line x1="0" y1="0" x2="420" y2="0" stroke="#334155" stroke-width="1" opacity="0.3"/>
+        <line x1="0" y1="50" x2="420" y2="50" stroke="#334155" stroke-width="1" opacity="0.3"/>
+        <line x1="0" y1="100" x2="420" y2="100" stroke="#334155" stroke-width="1" opacity="0.3"/>
+        <line x1="0" y1="150" x2="420" y2="150" stroke="#334155" stroke-width="1" opacity="0.3"/>
+
+        <!-- Line Chart with gradient -->
+        <defs>
+          <linearGradient id="lineGradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.4"/>
+            <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Area fill -->
+        <path d="M0,120 L60,100 L120,80 L180,70 L240,55 L300,45 L360,35 L420,40 L420,150 L0,150 Z" fill="url(#lineGradient)"/>
+
+        <!-- Line -->
+        <path d="M0,120 L60,100 L120,80 L180,70 L240,55 L300,45 L360,35 L420,40" stroke="#3B82F6" stroke-width="3" fill="none"/>
+
+        <!-- Data points -->
+        <circle cx="0" cy="120" r="4" fill="#3B82F6"/>
+        <circle cx="60" cy="100" r="4" fill="#3B82F6"/>
+        <circle cx="120" cy="80" r="4" fill="#3B82F6"/>
+        <circle cx="180" cy="70" r="4" fill="#3B82F6"/>
+        <circle cx="240" cy="55" r="4" fill="#3B82F6"/>
+        <circle cx="300" cy="45" r="4" fill="#3B82F6"/>
+        <circle cx="360" cy="35" r="4" fill="#3B82F6"/>
+        <circle cx="420" cy="40" r="4" fill="#FF6B35"/>
+
+        <!-- X-axis labels -->
+        <text x="0" y="170" font-family="Arial, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">Jan</text>
+        <text x="60" y="170" font-family="Arial, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">Feb</text>
+        <text x="120" y="170" font-family="Arial, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">Mar</text>
+        <text x="180" y="170" font-family="Arial, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">Apr</text>
+        <text x="240" y="170" font-family="Arial, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">May</text>
+        <text x="300" y="170" font-family="Arial, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">Jun</text>
+        <text x="360" y="170" font-family="Arial, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">Jul</text>
+        <text x="420" y="170" font-family="Arial, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">Aug</text>
+      </g>
+    </g>
+
+    <!-- Donut Chart -->
+    <g transform="translate(520, 110)">
+      <rect width="232" height="260" rx="8" fill="#1E293B"/>
+      <text x="16" y="28" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#F1F5F9">Top Categories</text>
+
+      <!-- Donut Chart SVG -->
+      <g transform="translate(116, 135)">
+        <!-- Donut slices -->
+        <circle cx="0" cy="0" r="60" fill="none" stroke="#3B82F6" stroke-width="30" stroke-dasharray="150 377" transform="rotate(-90)"/>
+        <circle cx="0" cy="0" r="60" fill="none" stroke="#10B981" stroke-width="30" stroke-dasharray="100 377" stroke-dashoffset="-150" transform="rotate(-90)"/>
+        <circle cx="0" cy="0" r="60" fill="none" stroke="#F59E0B" stroke-width="30" stroke-dasharray="80 377" stroke-dashoffset="-250" transform="rotate(-90)"/>
+        <circle cx="0" cy="0" r="60" fill="none" stroke="#8B5CF6" stroke-width="30" stroke-dasharray="47 377" stroke-dashoffset="-330" transform="rotate(-90)"/>
+
+        <!-- Center text -->
+        <text x="0" y="-8" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#F1F5F9" text-anchor="middle">100%</text>
+        <text x="0" y="10" font-family="Arial, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Coverage</text>
+      </g>
+
+      <!-- Legend -->
+      <g transform="translate(16, 215)">
+        <circle cx="4" cy="0" r="4" fill="#3B82F6"/>
+        <text x="14" y="4" font-family="Arial, sans-serif" font-size="11" fill="#94A3B8">Support (40%)</text>
+
+        <circle cx="114" cy="0" r="4" fill="#10B981"/>
+        <text x="124" y="4" font-family="Arial, sans-serif" font-size="11" fill="#94A3B8">Sales (27%)</text>
+
+        <circle cx="4" cy="20" r="4" fill="#F59E0B"/>
+        <text x="14" y="24" font-family="Arial, sans-serif" font-size="11" fill="#94A3B8">Technical (21%)</text>
+
+        <circle cx="114" cy="20" r="4" fill="#8B5CF6"/>
+        <text x="124" y="24" font-family="Arial, sans-serif" font-size="11" fill="#94A3B8">Other (12%)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Grid Pattern -->
+  <defs>
+    <pattern id="grid2" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1E293B" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#grid2)" opacity="0.3"/>
+</svg>
