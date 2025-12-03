@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const useStyles = makeStyles({
   section: {
     ...shorthands.padding('120px', '32px'),
-    backgroundColor: '#111827',
+    backgroundColor: '#F8F9FA',
     '@media (max-width: 768px)': {
       ...shorthands.padding('80px', '24px'),
     },
@@ -26,14 +26,14 @@ const useStyles = makeStyles({
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#E07A3A',
+    color: '#0D3253',
     marginBottom: '16px',
   },
 
   title: {
     fontSize: '48px',
     fontWeight: 700,
-    color: '#F1F5F9',
+    color: '#1A202C',
     marginBottom: '16px',
     lineHeight: 1.1,
     letterSpacing: '-0.02em',
@@ -44,7 +44,7 @@ const useStyles = makeStyles({
 
   subtitle: {
     fontSize: '20px',
-    color: '#94A3B8',
+    color: '#4A5568',
     maxWidth: '700px',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -69,7 +69,7 @@ const useStyles = makeStyles({
     backgroundColor: 'rgba(255, 255, 255, 0.02)',
     ...shorthands.borderRadius('12px'),
     ...shorthands.padding('32px'),
-    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
+    ...shorthands.border('1px', 'solid', 'rgba(226, 232, 240, 0.6)'),
     display: 'flex',
     flexDirection: 'column',
     ...shorthands.gap('24px'),
@@ -78,14 +78,14 @@ const useStyles = makeStyles({
     transitionTimingFunction: 'ease',
     ':hover': {
       backgroundColor: 'rgba(255, 255, 255, 0.04)',
-      ...shorthands.borderColor('rgba(255, 255, 255, 0.12)'),
+      ...shorthands.borderColor('rgba(203, 213, 224, 0.7)'),
     },
   },
 
   quote: {
     fontSize: '18px',
     lineHeight: 1.7,
-    color: '#F1F5F9',
+    color: '#1A202C',
     fontStyle: 'italic',
     fontWeight: 400,
     marginBottom: '24px',
@@ -108,13 +108,13 @@ const useStyles = makeStyles({
     width: '48px',
     height: '48px',
     ...shorthands.borderRadius('50%'),
-    backgroundColor: 'rgba(224, 122, 58, 0.15)',
+    backgroundColor: 'rgba(13, 50, 83, 0.12)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     fontSize: '18px',
     fontWeight: 600,
-    color: '#E07A3A',
+    color: '#0D3253',
   },
 
   authorInfo: {
@@ -126,12 +126,12 @@ const useStyles = makeStyles({
   name: {
     fontSize: '15px',
     fontWeight: 600,
-    color: '#F1F5F9',
+    color: '#1A202C',
   },
 
   authorTitle: {
     fontSize: '14px',
-    color: '#94A3B8',
+    color: '#4A5568',
     fontWeight: 400,
   },
 });

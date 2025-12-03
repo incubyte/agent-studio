@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const useStyles = makeStyles({
   section: {
     ...shorthands.padding('80px', '0'),
-    backgroundColor: '#0A0D14',
+    backgroundColor: '#FFFFFF',
     ...shorthands.overflow('hidden'),
     position: 'relative',
     '@media (max-width: 768px)': {
@@ -19,7 +19,7 @@ const useStyles = makeStyles({
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#64748B',
+    color: '#718096',
     marginBottom: '32px',
     ...shorthands.padding('0', '48px'),
   },
@@ -41,7 +41,7 @@ const useStyles = makeStyles({
     display: 'flex',
     alignItems: 'center',
     ...shorthands.gap('12px'),
-    color: '#94A3B8',
+    color: '#4A5568',
     fontSize: '14px',
     fontWeight: 500,
     whiteSpace: 'nowrap',
@@ -51,12 +51,12 @@ const useStyles = makeStyles({
   dot: {
     width: '4px',
     height: '4px',
-    backgroundColor: '#E07A3A',
+    backgroundColor: '#0D3253',
     ...shorthands.borderRadius('50%'),
   },
 
   highlight: {
-    color: '#F1F5F9',
+    color: '#1A202C',
     fontWeight: 600,
   },
 });

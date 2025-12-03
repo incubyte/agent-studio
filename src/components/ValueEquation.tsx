@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const useStyles = makeStyles({
   section: {
     ...shorthands.padding('120px', '32px'),
-    backgroundColor: '#111827',
+    backgroundColor: '#0D3253',
     '@media (max-width: 768px)': {
       ...shorthands.padding('80px', '24px'),
     },
@@ -73,7 +73,7 @@ const useStyles = makeStyles({
     left: 'calc(12.5% + 20px)',
     right: 'calc(12.5% + 20px)',
     height: '1px',
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundColor: 'rgba(203, 213, 224, 0.6)',
     '@media (max-width: 900px)': {
       display: 'none',
     },
@@ -88,7 +88,7 @@ const useStyles = makeStyles({
   stepNumber: {
     width: '40px',
     height: '40px',
-    ...shorthands.border('2px', 'solid', 'rgba(255, 255, 255, 0.2)'),
+    ...shorthands.border('2px', 'solid', 'rgba(203, 213, 224, 0.9)'),
     ...shorthands.borderRadius('50%'),
     display: 'flex',
     alignItems: 'center',
@@ -99,7 +99,7 @@ const useStyles = makeStyles({
     marginLeft: 'auto',
     marginRight: 'auto',
     marginBottom: '24px',
-    backgroundColor: '#111827',
+    backgroundColor: '#0D3253',
   },
 
   stepNumberActive: {

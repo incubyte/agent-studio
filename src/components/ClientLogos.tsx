@@ -5,8 +5,8 @@ const useStyles = makeStyles({
   section: {
     ...shorthands.padding('80px', '32px'),
     backgroundColor: '#111827',
-    borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-    borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+    borderTop: '1px solid rgba(226, 232, 240, 0.6)',
+    borderBottom: '1px solid rgba(226, 232, 240, 0.6)',
     '@media (max-width: 768px)': {
       ...shorthands.padding('60px', '24px'),
     },
@@ -50,7 +50,7 @@ const useStyles = makeStyles({
   logoPlaceholder: {
     height: '32px',
     ...shorthands.padding('8px', '24px'),
-    backgroundColor: 'rgba(255, 255, 255, 0.03)',
+    backgroundColor: 'rgba(226, 232, 240, 0.3)',
     ...shorthands.borderRadius('6px'),
     display: 'flex',
     alignItems: 'center',

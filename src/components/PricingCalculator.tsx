@@ -7,7 +7,7 @@ import { CheckmarkCircleFilled } from '@fluentui/react-icons';
 const useStyles = makeStyles({
   section: {
     ...shorthands.padding('120px', '32px'),
-    backgroundColor: '#0F172A',
+    backgroundColor: '#F1F3F5',
     '@media (max-width: 768px)': {
       ...shorthands.padding('80px', '24px'),
     },
@@ -29,14 +29,14 @@ const useStyles = makeStyles({
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#E07A3A',
+    color: '#0D3253',
     marginBottom: '16px',
   },
 
   title: {
     fontSize: '48px',
     fontWeight: 700,
-    color: '#F1F5F9',
+    color: '#1A202C',
     marginBottom: '16px',
     lineHeight: 1.1,
     letterSpacing: '-0.02em',
@@ -47,7 +47,7 @@ const useStyles = makeStyles({
 
   subtitle: {
     fontSize: '20px',
-    color: '#94A3B8',
+    color: '#4A5568',
     maxWidth: '700px',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -56,8 +56,8 @@ const useStyles = makeStyles({
   },
   
   calculator: {
-    backgroundColor: '#111827',
-    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
+    backgroundColor: '#F8F9FA',
+    ...shorthands.border('1px', 'solid', 'rgba(226, 232, 240, 0.6)'),
     ...shorthands.borderRadius('16px'),
     ...shorthands.padding('48px'),
     maxWidth: '1100px',
@@ -88,7 +88,7 @@ const useStyles = makeStyles({
   configTitle: {
     fontSize: '18px',
     fontWeight: 600,
-    color: '#F1F5F9',
+    color: '#1A202C',
     display: 'flex',
     alignItems: 'center',
     ...shorthands.gap('8px'),
@@ -105,19 +105,19 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'space-between',
     fontSize: '14px',
-    color: '#94A3B8',
+    color: '#4A5568',
     fontWeight: 500,
   },
 
   sliderValue: {
-    color: '#E07A3A',
+    color: '#0D3253',
     fontWeight: 600,
     fontSize: '16px',
   },
 
   sliderNote: {
     fontSize: '14px',
-    color: '#64748B',
+    color: '#718096',
     lineHeight: 1.5,
     fontWeight: 400,
   },
@@ -132,39 +132,39 @@ const useStyles = makeStyles({
     backgroundColor: 'rgba(255, 255, 255, 0.02)',
     ...shorthands.borderRadius('8px'),
     ...shorthands.padding('16px'),
-    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
+    ...shorthands.border('1px', 'solid', 'rgba(226, 232, 240, 0.6)'),
     cursor: 'pointer',
     transitionProperty: 'border-color, background',
     transitionDuration: '0.2s',
     transitionTimingFunction: 'ease',
     ':hover': {
-      ...shorthands.borderColor('rgba(255, 255, 255, 0.12)'),
+      ...shorthands.borderColor('rgba(203, 213, 224, 0.7)'),
     },
   },
 
   tierCardActive: {
-    ...shorthands.borderColor('#E07A3A'),
+    ...shorthands.borderColor('#0D3253'),
     backgroundColor: 'rgba(224, 122, 58, 0.05)',
   },
   
   tierName: {
     fontSize: '14px',
     fontWeight: 600,
-    color: '#F1F5F9',
+    color: '#1A202C',
     marginBottom: '8px',
   },
 
   tierPrice: {
     fontSize: '18px',
     fontWeight: 700,
-    color: '#E07A3A',
+    color: '#0D3253',
     marginBottom: '8px',
     lineHeight: 1,
   },
 
   tierDescription: {
     fontSize: '13px',
-    color: '#94A3B8',
+    color: '#4A5568',
     lineHeight: 1.5,
     marginBottom: '8px',
     fontWeight: 400,
@@ -172,7 +172,7 @@ const useStyles = makeStyles({
 
   tierExamples: {
     fontSize: '12px',
-    color: '#64748B',
+    color: '#718096',
     lineHeight: 1.4,
     fontWeight: 400,
   },
@@ -180,7 +180,7 @@ const useStyles = makeStyles({
   tierCount: {
     marginTop: '16px',
     fontSize: '14px',
-    color: '#94A3B8',
+    color: '#4A5568',
     fontWeight: 400,
   },
   
@@ -188,7 +188,7 @@ const useStyles = makeStyles({
     backgroundColor: 'rgba(255, 255, 255, 0.02)',
     ...shorthands.borderRadius('12px'),
     ...shorthands.padding('32px'),
-    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
+    ...shorthands.border('1px', 'solid', 'rgba(226, 232, 240, 0.6)'),
     position: 'sticky',
     top: '24px',
     height: 'fit-content',
@@ -200,7 +200,7 @@ const useStyles = makeStyles({
   summaryTitle: {
     fontSize: '18px',
     fontWeight: 600,
-    color: '#F1F5F9',
+    color: '#1A202C',
     textAlign: 'left',
   },
   
@@ -209,7 +209,7 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     ...shorthands.gap('12px'),
     paddingBottom: '24px',
-    borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+    borderBottom: '1px solid rgba(226, 232, 240, 0.6)',
   },
 
   summaryRow: {
@@ -220,12 +220,12 @@ const useStyles = makeStyles({
   },
 
   summaryLabel: {
-    color: '#94A3B8',
+    color: '#4A5568',
     fontWeight: 400,
   },
 
   summaryValue: {
-    color: '#F1F5F9',
+    color: '#1A202C',
     fontWeight: 600,
   },
 
@@ -234,12 +234,12 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     ...shorthands.gap('16px'),
     paddingTop: '24px',
-    borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+    borderTop: '1px solid rgba(226, 232, 240, 0.6)',
   },
 
   totalLabel: {
     fontSize: '14px',
-    color: '#94A3B8',
+    color: '#4A5568',
     fontWeight: 500,
     textTransform: 'uppercase',
     letterSpacing: '0.5px',
@@ -253,7 +253,7 @@ const useStyles = makeStyles({
 
   priceCurrency: {
     fontSize: '24px',
-    color: '#94A3B8',
+    color: '#4A5568',
     fontWeight: 600,
     verticalAlign: 'top',
   },
@@ -261,21 +261,21 @@ const useStyles = makeStyles({
   totalValue: {
     fontSize: '56px',
     fontWeight: 700,
-    color: '#F1F5F9',
+    color: '#1A202C',
     letterSpacing: '-0.02em',
     lineHeight: 1,
   },
 
   totalNote: {
     fontSize: '14px',
-    color: '#64748B',
+    color: '#718096',
     fontWeight: 400,
   },
   
   ctaButton: {
     width: '100%',
-    backgroundColor: '#E07A3A',
-    color: '#0F172A',
+    backgroundColor: '#0D3253',
+    color: '#F1F3F5',
     fontWeight: 600,
     fontSize: '16px',
     ...shorthands.padding('16px', '24px'),
@@ -283,10 +283,10 @@ const useStyles = makeStyles({
     ...shorthands.border('none'),
     cursor: 'pointer',
     transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-    boxShadow: '0 4px 12px rgba(224, 122, 58, 0.25)',
+    boxShadow: '0 4px 12px rgba(13, 50, 83, 0.15)',
     ':hover': {
       transform: 'translateY(-2px) scale(1.02)',
-      boxShadow: '0 6px 20px rgba(224, 122, 58, 0.3)',
+      boxShadow: '0 6px 20px rgba(13, 50, 83, 0.2)',
     },
   },
 
@@ -308,7 +308,7 @@ const useStyles = makeStyles({
 
   includedItem: {
     fontSize: '14px',
-    color: '#94A3B8',
+    color: '#4A5568',
     display: 'flex',
     alignItems: 'center',
     ...shorthands.gap('10px'),

@@ -12,7 +12,7 @@ import {
 const useStyles = makeStyles({
   section: {
     ...shorthands.padding('120px', '32px'),
-    backgroundColor: '#111827',
+    backgroundColor: '#F8F9FA',
     '@media (max-width: 768px)': {
       ...shorthands.padding('80px', '24px'),
     },
@@ -34,14 +34,14 @@ const useStyles = makeStyles({
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#E07A3A',
+    color: '#0D3253',
     marginBottom: '16px',
   },
 
   title: {
     fontSize: '48px',
     fontWeight: 700,
-    color: '#F1F5F9',
+    color: '#1A202C',
     marginBottom: '16px',
     lineHeight: 1.1,
     letterSpacing: '-0.02em',
@@ -52,7 +52,7 @@ const useStyles = makeStyles({
 
   subtitle: {
     fontSize: '20px',
-    color: '#94A3B8',
+    color: '#4A5568',
     maxWidth: '700px',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -73,36 +73,36 @@ const useStyles = makeStyles({
   },
   
   card: {
-    backgroundColor: 'rgba(255, 255, 255, 0.03)',
+    backgroundColor: 'rgba(226, 232, 240, 0.3)',
     ...shorthands.borderRadius('12px'),
     ...shorthands.padding('32px'),
-    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
+    ...shorthands.border('1px', 'solid', 'rgba(226, 232, 240, 0.6)'),
     transitionProperty: 'background, border-color',
     transitionDuration: '0.2s',
     transitionTimingFunction: 'ease',
     ':hover': {
-      backgroundColor: 'rgba(255, 255, 255, 0.05)',
-      ...shorthands.borderColor('rgba(255, 255, 255, 0.12)'),
+      backgroundColor: 'rgba(226, 232, 240, 0.5)',
+      ...shorthands.borderColor('rgba(203, 213, 224, 0.7)'),
     },
   },
 
   iconWrapper: {
     width: '56px',
     height: '56px',
-    backgroundColor: 'rgba(224, 122, 58, 0.15)',
+    backgroundColor: 'rgba(13, 50, 83, 0.12)',
     ...shorthands.borderRadius('12px'),
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: '20px',
-    color: '#E07A3A',
+    color: '#0D3253',
     fontSize: '32px',
   },
   
   cardTitle: {
     fontSize: '18px',
     fontWeight: 600,
-    color: '#F1F5F9',
+    color: '#1A202C',
     marginBottom: '12px',
     lineHeight: 1.3,
   },
@@ -110,7 +110,7 @@ const useStyles = makeStyles({
   cardDescription: {
     fontSize: '16px',
     lineHeight: 1.6,
-    color: '#94A3B8',
+    color: '#4A5568',
     fontWeight: 400,
   },
   
@@ -126,19 +126,19 @@ const useStyles = makeStyles({
   comparisonTitle: {
     fontSize: '32px',
     fontWeight: 700,
-    color: '#F1F5F9',
+    color: '#1A202C',
     marginBottom: '16px',
     lineHeight: 1.2,
   },
 
   comparisonSubtitle: {
     fontSize: '18px',
-    color: '#94A3B8',
+    color: '#4A5568',
     fontWeight: 400,
   },
 
   comparisonTable: {
-    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
+    ...shorthands.border('1px', 'solid', 'rgba(226, 232, 240, 0.6)'),
     ...shorthands.borderRadius('12px'),
     overflow: 'hidden',
   },
@@ -146,7 +146,7 @@ const useStyles = makeStyles({
   comparisonRow: {
     display: 'grid',
     gridTemplateColumns: '2fr 1fr 1fr',
-    borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+    borderBottom: '1px solid rgba(226, 232, 240, 0.6)',
     ':last-child': {
       borderBottom: 'none',
     },
@@ -166,7 +166,7 @@ const useStyles = makeStyles({
   },
 
   cellFeature: {
-    color: '#94A3B8',
+    color: '#4A5568',
     backgroundColor: 'rgba(255, 255, 255, 0.02)',
     fontWeight: 500,
   },
@@ -191,9 +191,9 @@ const useStyles = makeStyles({
     ...shorthands.gap('64px'),
     flexWrap: 'wrap',
     ...shorthands.padding('32px'),
-    backgroundColor: 'rgba(255, 255, 255, 0.03)',
+    backgroundColor: 'rgba(226, 232, 240, 0.3)',
     ...shorthands.borderRadius('12px'),
-    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
+    ...shorthands.border('1px', 'solid', 'rgba(226, 232, 240, 0.6)'),
   },
 
   stat: {
@@ -203,13 +203,13 @@ const useStyles = makeStyles({
   statNumber: {
     fontSize: '48px',
     fontWeight: 700,
-    color: '#F1F5F9',
+    color: '#1A202C',
     lineHeight: 1,
   },
 
   statLabel: {
     fontSize: '14px',
-    color: '#94A3B8',
+    color: '#4A5568',
     marginTop: '8px',
     fontWeight: 400,
   },

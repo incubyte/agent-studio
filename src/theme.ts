@@ -30,12 +30,16 @@ export const customTheme = {
   colorBrandBackground: '#ff6b35',
   colorBrandBackgroundHover: '#ff8555',
   colorBrandBackgroundPressed: '#e55a2a',
-  colorNeutralBackground1: '#0f0f1a',
-  colorNeutralBackground2: '#1a1a2e',
-  colorNeutralBackground3: '#242444',
+  // Deep Space Palette
+  colorNeutralBackground1: '#050a10', // Deepest black-blue
+  colorNeutralBackground2: '#0f0f1a', // Primary background
+  colorNeutralBackground3: '#1a1a2e', // Secondary/Card background
+  colorNeutralBackground4: '#242444', // Highlight background
   colorNeutralForeground1: '#ffffff',
-  colorNeutralForeground2: '#b0b0c0',
-  colorNeutralForeground3: '#808090',
+  colorNeutralForeground2: '#cbd5e1', // Lighter muted text
+  colorNeutralForeground3: '#94a3b8', // Muted text
+  // Luminous Accents
+  colorBrandShadow: 'rgba(255, 107, 53, 0.4)',
 };
 
 export const colors = {

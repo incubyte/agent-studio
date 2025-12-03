@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const useStyles = makeStyles({
   section: {
     ...shorthands.padding('120px', '32px'),
-    backgroundColor: '#111827',
+    backgroundColor: '#F8F9FA',
     '@media (max-width: 768px)': {
       ...shorthands.padding('80px', '24px'),
     },
@@ -26,14 +26,14 @@ const useStyles = makeStyles({
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#E07A3A',
+    color: '#0D3253',
     marginBottom: '16px',
   },
   
   title: {
     fontSize: '48px',
     fontWeight: 700,
-    color: '#F1F5F9',
+    color: '#1A202C',
     marginBottom: '16px',
     lineHeight: 1.1,
     letterSpacing: '-0.02em',
@@ -44,7 +44,7 @@ const useStyles = makeStyles({
   
   subtitle: {
     fontSize: '20px',
-    color: '#94A3B8',
+    color: '#4A5568',
     maxWidth: '700px',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -70,15 +70,15 @@ const useStyles = makeStyles({
   stepNumber: {
     width: '80px',
     height: '80px',
-    backgroundColor: 'rgba(224, 122, 58, 0.1)',
+    backgroundColor: 'rgba(13, 50, 83, 0.08)',
     ...shorthands.borderRadius('50%'),
-    ...shorthands.border('2px', 'solid', '#E07A3A'),
+    ...shorthands.border('2px', 'solid', '#0D3253'),
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     fontSize: '32px',
     fontWeight: 700,
-    color: '#E07A3A',
+    color: '#0D3253',
     marginLeft: 'auto',
     marginRight: 'auto',
     marginBottom: '24px',
@@ -87,7 +87,7 @@ const useStyles = makeStyles({
   stepTitle: {
     fontSize: '22px',
     fontWeight: 600,
-    color: '#F1F5F9',
+    color: '#1A202C',
     marginBottom: '12px',
     lineHeight: 1.3,
   },
@@ -95,12 +95,12 @@ const useStyles = makeStyles({
   stepDescription: {
     fontSize: '16px',
     lineHeight: 1.6,
-    color: '#94A3B8',
+    color: '#4A5568',
     fontWeight: 400,
   },
 
   stepHighlight: {
-    color: '#E07A3A',
+    color: '#0D3253',
     fontWeight: 600,
   },
   
@@ -109,12 +109,12 @@ const useStyles = makeStyles({
     ...shorthands.borderRadius('12px'),
     ...shorthands.padding('40px'),
     textAlign: 'center',
-    ...shorthands.border('1px', 'solid', 'rgba(224, 122, 58, 0.3)'),
+    ...shorthands.border('1px', 'solid', 'rgba(13, 50, 83, 0.2)'),
   },
 
   bannerText: {
     fontSize: '20px',
-    color: '#F1F5F9',
+    color: '#1A202C',
     fontWeight: 600,
     marginBottom: '8px',
     lineHeight: 1.3,
@@ -122,7 +122,7 @@ const useStyles = makeStyles({
 
   bannerSubtext: {
     fontSize: '16px',
-    color: '#94A3B8',
+    color: '#4A5568',
     fontWeight: 400,
     lineHeight: 1.6,
   },

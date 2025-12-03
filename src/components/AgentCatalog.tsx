@@ -6,7 +6,7 @@ import { agents, categoryInfo, type AgentCategory } from '../data/agents';
 const useStyles = makeStyles({
   section: {
     ...shorthands.padding('120px', '32px'),
-    backgroundColor: '#0B1120',
+    backgroundColor: '#FFFFFF',
     '@media (max-width: 768px)': {
       ...shorthands.padding('80px', '24px'),
     },
@@ -28,14 +28,14 @@ const useStyles = makeStyles({
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#E07A3A',
+    color: '#0D3253',
     marginBottom: '16px',
   },
 
   title: {
     fontSize: '48px',
     fontWeight: 700,
-    color: '#F1F5F9',
+    color: '#1A202C',
     marginBottom: '16px',
     lineHeight: 1.1,
     letterSpacing: '-0.02em',
@@ -46,7 +46,7 @@ const useStyles = makeStyles({
 
   subtitle: {
     fontSize: '20px',
-    color: '#94A3B8',
+    color: '#4A5568',
     maxWidth: '700px',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -68,16 +68,16 @@ const useStyles = makeStyles({
   },
 
   card: {
-    backgroundColor: 'rgba(255, 255, 255, 0.03)',
+    backgroundColor: 'rgba(226, 232, 240, 0.3)',
     ...shorthands.borderRadius('12px'),
     ...shorthands.padding('32px'),
-    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
+    ...shorthands.border('1px', 'solid', 'rgba(226, 232, 240, 0.6)'),
     transitionProperty: 'background, border-color',
     transitionDuration: '0.2s',
     transitionTimingFunction: 'ease',
     ':hover': {
-      backgroundColor: 'rgba(255, 255, 255, 0.05)',
-      ...shorthands.borderColor('rgba(255, 255, 255, 0.12)'),
+      backgroundColor: 'rgba(226, 232, 240, 0.5)',
+      ...shorthands.borderColor('rgba(203, 213, 224, 0.7)'),
     },
   },
 
@@ -87,10 +87,10 @@ const useStyles = makeStyles({
     ...shorthands.gap('6px'),
     ...shorthands.padding('6px', '12px'),
     ...shorthands.borderRadius('6px'),
-    backgroundColor: 'rgba(224, 122, 58, 0.1)',
+    backgroundColor: 'rgba(13, 50, 83, 0.08)',
     fontSize: '12px',
     fontWeight: 600,
-    color: '#E07A3A',
+    color: '#0D3253',
     textTransform: 'uppercase',
     letterSpacing: '0.5px',
     marginBottom: '16px',
@@ -99,7 +99,7 @@ const useStyles = makeStyles({
   cardName: {
     fontSize: '20px',
     fontWeight: 600,
-    color: '#F1F5F9',
+    color: '#1A202C',
     marginBottom: '12px',
     lineHeight: 1.3,
   },
@@ -107,7 +107,7 @@ const useStyles = makeStyles({
   cardDescription: {
     fontSize: '16px',
     lineHeight: 1.6,
-    color: '#94A3B8',
+    color: '#4A5568',
     fontWeight: 400,
   },
 
@@ -119,9 +119,9 @@ const useStyles = makeStyles({
   viewAllButton: {
     ...shorthands.padding('16px', '32px'),
     ...shorthands.borderRadius('8px'),
-    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.2)'),
+    ...shorthands.border('1px', 'solid', 'rgba(203, 213, 224, 0.9)'),
     backgroundColor: 'transparent',
-    color: '#F1F5F9',
+    color: '#1A202C',
     fontSize: '16px',
     fontWeight: 600,
     cursor: 'pointer',
@@ -129,12 +129,12 @@ const useStyles = makeStyles({
     transitionDuration: '0.2s',
     transitionTimingFunction: 'ease',
     ':hover': {
-      backgroundColor: 'rgba(255, 255, 255, 0.05)',
-      ...shorthands.borderColor('rgba(255, 255, 255, 0.3)'),
+      backgroundColor: 'rgba(226, 232, 240, 0.5)',
+      ...shorthands.borderColor('rgba(160, 174, 192, 0.4)'),
       transform: 'scale(1.02)',
     },
     ':focus-visible': {
-      outline: '2px solid #F1F5F9',
+      outline: '2px solid #1A202C',
       outlineOffset: '2px',
     },
   },
@@ -157,9 +157,9 @@ const useStyles = makeStyles({
   },
 
   modalContent: {
-    backgroundColor: '#0B1120',
+    backgroundColor: '#FFFFFF',
     ...shorthands.borderRadius('16px'),
-    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.1)'),
+    ...shorthands.border('1px', 'solid', 'rgba(203, 213, 224, 0.6)'),
     maxWidth: '1200px',
     width: '100%',
     maxHeight: '90vh',
@@ -170,7 +170,7 @@ const useStyles = makeStyles({
 
   modalHeader: {
     ...shorthands.padding('32px', '32px', '24px', '32px'),
-    borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+    borderBottom: '1px solid rgba(226, 232, 240, 0.6)',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -182,7 +182,7 @@ const useStyles = makeStyles({
   modalTitle: {
     fontSize: '32px',
     fontWeight: 700,
-    color: '#F1F5F9',
+    color: '#1A202C',
     lineHeight: 1.2,
     '@media (max-width: 768px)': {
       fontSize: '24px',
@@ -193,9 +193,9 @@ const useStyles = makeStyles({
     width: '40px',
     height: '40px',
     ...shorthands.borderRadius('50%'),
-    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.2)'),
+    ...shorthands.border('1px', 'solid', 'rgba(203, 213, 224, 0.9)'),
     backgroundColor: 'transparent',
-    color: '#F1F5F9',
+    color: '#1A202C',
     fontSize: '24px',
     cursor: 'pointer',
     display: 'flex',
@@ -205,8 +205,8 @@ const useStyles = makeStyles({
     transitionDuration: '0.2s',
     transitionTimingFunction: 'ease',
     ':hover': {
-      backgroundColor: 'rgba(255, 255, 255, 0.05)',
-      ...shorthands.borderColor('rgba(255, 255, 255, 0.3)'),
+      backgroundColor: 'rgba(226, 232, 240, 0.5)',
+      ...shorthands.borderColor('rgba(160, 174, 192, 0.4)'),
     },
   },
 
@@ -214,7 +214,7 @@ const useStyles = makeStyles({
     display: 'flex',
     ...shorthands.gap('8px'),
     ...shorthands.padding('24px', '32px', '0', '32px'),
-    borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+    borderBottom: '1px solid rgba(226, 232, 240, 0.6)',
     overflowX: 'auto',
     '@media (max-width: 768px)': {
       ...shorthands.padding('20px', '24px', '0', '24px'),
@@ -226,7 +226,7 @@ const useStyles = makeStyles({
     backgroundColor: 'transparent',
     ...shorthands.border('none'),
     borderBottom: '2px solid transparent',
-    color: '#94A3B8',
+    color: '#4A5568',
     fontSize: '15px',
     fontWeight: 600,
     cursor: 'pointer',
@@ -235,13 +235,13 @@ const useStyles = makeStyles({
     transitionDuration: '0.2s',
     transitionTimingFunction: 'ease',
     ':hover': {
-      color: '#F1F5F9',
+      color: '#1A202C',
     },
   },
 
   modalTabActive: {
-    color: '#F1F5F9',
-    borderBottomColor: '#E07A3A',
+    color: '#1A202C',
+    borderBottomColor: '#0D3253',
   },
 
   modalBody: {
@@ -262,23 +262,23 @@ const useStyles = makeStyles({
   },
 
   agentItem: {
-    backgroundColor: 'rgba(255, 255, 255, 0.03)',
+    backgroundColor: 'rgba(226, 232, 240, 0.3)',
     ...shorthands.borderRadius('8px'),
     ...shorthands.padding('20px'),
-    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
+    ...shorthands.border('1px', 'solid', 'rgba(226, 232, 240, 0.6)'),
     transitionProperty: 'background, border-color',
     transitionDuration: '0.2s',
     transitionTimingFunction: 'ease',
     ':hover': {
-      backgroundColor: 'rgba(255, 255, 255, 0.05)',
-      ...shorthands.borderColor('rgba(255, 255, 255, 0.12)'),
+      backgroundColor: 'rgba(226, 232, 240, 0.5)',
+      ...shorthands.borderColor('rgba(203, 213, 224, 0.7)'),
     },
   },
 
   agentName: {
     fontSize: '16px',
     fontWeight: 600,
-    color: '#F1F5F9',
+    color: '#1A202C',
     marginBottom: '6px',
     lineHeight: 1.3,
   },
@@ -286,7 +286,7 @@ const useStyles = makeStyles({
   agentDescription: {
     fontSize: '14px',
     lineHeight: 1.5,
-    color: '#94A3B8',
+    color: '#4A5568',
     fontWeight: 400,
   },
 });

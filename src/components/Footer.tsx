@@ -3,16 +3,16 @@ import { makeStyles, shorthands } from '@fluentui/react-components';
 const useStyles = makeStyles({
   footer: {
     ...shorthands.padding('48px', '24px'),
-    backgroundColor: '#0a0a14',
-    borderTop: '1px solid #1a1a2e',
+    backgroundColor: '#0D3253',
+    borderTop: '1px solid rgba(255, 255, 255, 0.1)',
   },
-  
+
   container: {
     maxWidth: '1200px',
     marginLeft: 'auto',
     marginRight: 'auto',
   },
-  
+
   top: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -24,11 +24,11 @@ const useStyles = makeStyles({
       flexDirection: 'column',
     },
   },
-  
+
   brand: {
     maxWidth: '300px',
   },
-  
+
   logo: {
     fontSize: '24px',
     fontWeight: 800,
@@ -38,17 +38,17 @@ const useStyles = makeStyles({
     alignItems: 'center',
     ...shorthands.gap('8px'),
   },
-  
+
   logoAccent: {
-    color: '#ff6b35',
+    color: '#ffffff',
   },
-  
+
   tagline: {
     fontSize: '14px',
-    color: '#707080',
+    color: 'rgba(255, 255, 255, 0.7)',
     lineHeight: 1.6,
   },
-  
+
   links: {
     display: 'flex',
     ...shorthands.gap('64px'),
@@ -57,9 +57,9 @@ const useStyles = makeStyles({
       ...shorthands.gap('32px'),
     },
   },
-  
+
   linkGroup: {},
-  
+
   linkTitle: {
     fontSize: '14px',
     fontWeight: 600,
@@ -68,54 +68,54 @@ const useStyles = makeStyles({
     textTransform: 'uppercase',
     letterSpacing: '1px',
   },
-  
+
   link: {
     display: 'block',
     fontSize: '14px',
-    color: '#707080',
+    color: 'rgba(255, 255, 255, 0.7)',
     textDecoration: 'none',
     marginBottom: '12px',
     transition: 'color 0.2s ease',
     cursor: 'pointer',
     ':hover': {
-      color: '#ff6b35',
+      color: '#ffffff',
     },
   },
-  
+
   bottom: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingTop: '24px',
-    borderTop: '1px solid #1a1a2e',
+    borderTop: '1px solid rgba(255, 255, 255, 0.1)',
     flexWrap: 'wrap',
     ...shorthands.gap('16px'),
   },
-  
+
   copyright: {
     fontSize: '14px',
-    color: '#505060',
+    color: 'rgba(255, 255, 255, 0.6)',
   },
-  
+
   social: {
     display: 'flex',
     ...shorthands.gap('16px'),
   },
-  
+
   socialLink: {
     width: '40px',
     height: '40px',
-    backgroundColor: '#1a1a2e',
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
     ...shorthands.borderRadius('8px'),
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    color: '#707080',
+    color: 'rgba(255, 255, 255, 0.7)',
     fontSize: '18px',
     transition: 'all 0.2s ease',
     cursor: 'pointer',
     ':hover': {
-      backgroundColor: '#ff6b35',
+      backgroundColor: 'rgba(255, 255, 255, 0.2)',
       color: '#ffffff',
     },
   },
@@ -123,21 +123,21 @@ const useStyles = makeStyles({
 
 export function Footer() {
   const styles = useStyles();
-  
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.top}>
           <div className={styles.brand}>
             <div className={styles.logo}>
-              <span className={styles.logoAccent}>Incubyte</span> Agent Studio
+              <span className={styles.logoAccent}>Incubyte</span> AgentWorks
             </div>
             <p className={styles.tagline}>
-              Production-ready AI agents deployed to your infrastructure. 
+              Production-ready AI agents deployed to your infrastructure.
               Fixed pricing. Full ownership. No lock-in.
             </p>
           </div>
-          
+
           <div className={styles.links}>
             <div className={styles.linkGroup}>
               <h4 className={styles.linkTitle}>Product</h4>
@@ -146,7 +146,7 @@ export function Footer() {
               <a className={styles.link}>How It Works</a>
               <a className={styles.link}>Case Studies</a>
             </div>
-            
+
             <div className={styles.linkGroup}>
               <h4 className={styles.linkTitle}>Company</h4>
               <a className={styles.link}>About Incubyte</a>
@@ -154,7 +154,7 @@ export function Footer() {
               <a className={styles.link}>Careers</a>
               <a className={styles.link}>Contact</a>
             </div>
-            
+
             <div className={styles.linkGroup}>
               <h4 className={styles.linkTitle}>Resources</h4>
               <a className={styles.link}>Documentation</a>
@@ -164,12 +164,12 @@ export function Footer() {
             </div>
           </div>
         </div>
-        
+
         <div className={styles.bottom}>
           <p className={styles.copyright}>
             © 2025 Incubyte. All rights reserved.
           </p>
-          
+
           <div className={styles.social}>
             <a className={styles.socialLink} title="LinkedIn">in</a>
             <a className={styles.socialLink} title="Twitter">𝕏</a>

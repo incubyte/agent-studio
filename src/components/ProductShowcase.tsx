@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const useStyles = makeStyles({
   section: {
     ...shorthands.padding('120px', '32px'),
-    backgroundColor: '#111827',
+    backgroundColor: '#050a10', // Deepest dark
     '@media (max-width: 768px)': {
       ...shorthands.padding('80px', '24px'),
     },
@@ -26,14 +26,14 @@ const useStyles = makeStyles({
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#E07A3A',
+    color: '#ff6b35',
     marginBottom: '16px',
   },
 
   title: {
     fontSize: '48px',
     fontWeight: 700,
-    color: '#F1F5F9',
+    color: '#ffffff',
     marginBottom: '16px',
     lineHeight: 1.1,
     letterSpacing: '-0.02em',
@@ -44,7 +44,7 @@ const useStyles = makeStyles({
 
   subtitle: {
     fontSize: '20px',
-    color: '#94A3B8',
+    color: '#94a3b8',
     maxWidth: '700px',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -72,10 +72,11 @@ const useStyles = makeStyles({
   },
 
   demoContainer: {
-    background: 'linear-gradient(180deg, #111827 0%, #0B1120 100%)',
+    background: 'linear-gradient(180deg, rgba(26, 26, 46, 0.4) 0%, rgba(11, 17, 32, 0.4) 100%)',
     ...shorthands.padding('80px', '40px'),
     ...shorthands.borderRadius('16px'),
     ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.05)'),
+    backdropFilter: 'blur(12px)',
     '@media (max-width: 768px)': {
       ...shorthands.padding('40px', '24px'),
     },
@@ -92,6 +93,7 @@ const useStyles = makeStyles({
     transition: 'transform 0.3s ease',
     ':hover': {
       transform: 'translateY(-4px)',
+      ...shorthands.borderColor('rgba(255, 107, 53, 0.3)'),
     },
   },
 
@@ -104,24 +106,25 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     ...shorthands.gap('16px'),
     ...shorthands.padding('48px', '32px'),
-    background: 'linear-gradient(135deg, #1F2937 0%, #111827 100%)',
+    background: 'linear-gradient(135deg, #1a1a2e 0%, #0f0f1a 100%)',
   },
 
   placeholderIcon: {
     width: '64px',
     height: '64px',
-    backgroundColor: 'rgba(224, 122, 58, 0.15)',
+    backgroundColor: 'rgba(255, 107, 53, 0.1)',
     ...shorthands.borderRadius('12px'),
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    color: '#E07A3A',
+    color: '#ff6b35',
     fontSize: '32px',
+    boxShadow: '0 0 20px rgba(255, 107, 53, 0.2)',
   },
 
   placeholderText: {
     fontSize: '14px',
-    color: '#64748B',
+    color: '#94a3b8',
     textAlign: 'center',
     fontWeight: 400,
   },
@@ -139,13 +142,13 @@ const useStyles = makeStyles({
   cardTitle: {
     fontSize: '20px',
     fontWeight: 600,
-    color: '#F1F5F9',
+    color: '#ffffff',
     marginBottom: '8px',
   },
 
   cardDescription: {
     fontSize: '16px',
-    color: '#94A3B8',
+    color: '#94a3b8',
     lineHeight: 1.6,
   },
 
@@ -163,32 +166,32 @@ const useStyles = makeStyles({
     ...shorthands.padding('8px', '16px'),
     ...shorthands.borderRadius('6px'),
     fontSize: '14px',
-    color: '#94A3B8',
+    color: '#94a3b8',
     backgroundColor: 'transparent',
     ...shorthands.border('none'),
     cursor: 'pointer',
     transition: 'background 0.2s ease, color 0.2s ease',
     fontWeight: 500,
     ':hover': {
-      color: '#F1F5F9',
+      color: '#ffffff',
       backgroundColor: 'rgba(255, 255, 255, 0.05)',
     },
   },
 
   demoTabActive: {
     backgroundColor: 'rgba(255, 255, 255, 0.1)',
-    color: '#F1F5F9',
+    color: '#ffffff',
   },
 
   // Optional browser chrome frame for context
   browserChrome: {
-    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+    backgroundColor: 'rgba(26, 26, 46, 0.8)',
     ...shorthands.padding('12px', '16px'),
     ...shorthands.borderRadius('12px', '12px', '0', '0'),
     display: 'flex',
     alignItems: 'center',
     ...shorthands.gap('8px'),
-    ...shorthands.borderBottom('1px', 'solid', 'rgba(255, 255, 255, 0.1)'),
+    ...shorthands.borderBottom('1px', 'solid', 'rgba(255, 255, 255, 0.05)'),
   },
 
   chromeDots: {

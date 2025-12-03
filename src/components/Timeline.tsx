@@ -54,7 +54,7 @@ const useStyles = makeStyles({
   
   timeline: {
     position: 'relative',
-    borderLeft: '2px solid rgba(255, 255, 255, 0.1)',
+    borderLeft: '2px solid rgba(203, 213, 224, 0.6)',
     ...shorthands.padding('0', '0', '0', '32px'),
     marginLeft: '8px',
   },

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const useStyles = makeStyles({
   section: {
     ...shorthands.padding('120px', '32px'),
-    backgroundColor: '#0F172A',
+    backgroundColor: '#F1F3F5',
     '@media (max-width: 768px)': {
       ...shorthands.padding('80px', '24px'),
     },
@@ -26,14 +26,14 @@ const useStyles = makeStyles({
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#E07A3A',
+    color: '#0D3253',
     marginBottom: '16px',
   },
   
   title: {
     fontSize: '48px',
     fontWeight: 700,
-    color: '#F1F5F9',
+    color: '#1A202C',
     marginBottom: '16px',
     lineHeight: 1.1,
     letterSpacing: '-0.02em',
@@ -44,7 +44,7 @@ const useStyles = makeStyles({
 
   subtitle: {
     fontSize: '20px',
-    color: '#94A3B8',
+    color: '#4A5568',
     maxWidth: '700px',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -69,17 +69,17 @@ const useStyles = makeStyles({
     left: 'calc(16.67% + 32px)',
     right: 'calc(16.67% + 32px)',
     height: '1px',
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundColor: 'rgba(203, 213, 224, 0.6)',
     '@media (max-width: 900px)': {
       display: 'none',
     },
   },
   
   step: {
-    backgroundColor: 'rgba(255, 255, 255, 0.03)',
+    backgroundColor: 'rgba(226, 232, 240, 0.3)',
     ...shorthands.borderRadius('12px'),
     ...shorthands.padding('32px'),
-    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
+    ...shorthands.border('1px', 'solid', 'rgba(226, 232, 240, 0.6)'),
     textAlign: 'center',
     position: 'relative',
     zIndex: 1,
@@ -87,26 +87,26 @@ const useStyles = makeStyles({
     transitionDuration: '0.2s',
     transitionTimingFunction: 'ease',
     ':hover': {
-      backgroundColor: 'rgba(255, 255, 255, 0.05)',
-      ...shorthands.borderColor('rgba(255, 255, 255, 0.12)'),
+      backgroundColor: 'rgba(226, 232, 240, 0.5)',
+      ...shorthands.borderColor('rgba(203, 213, 224, 0.7)'),
     },
   },
   
   stepNumber: {
     width: '64px',
     height: '64px',
-    ...shorthands.border('2px', 'solid', '#E07A3A'),
+    ...shorthands.border('2px', 'solid', '#0D3253'),
     ...shorthands.borderRadius('50%'),
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     fontSize: '28px',
     fontWeight: 700,
-    color: '#E07A3A',
+    color: '#0D3253',
     marginLeft: 'auto',
     marginRight: 'auto',
     marginBottom: '24px',
-    backgroundColor: '#0F172A',
+    backgroundColor: '#F1F3F5',
   },
   
   stepIcon: {
@@ -117,7 +117,7 @@ const useStyles = makeStyles({
   stepTitle: {
     fontSize: '20px',
     fontWeight: 600,
-    color: '#F1F5F9',
+    color: '#1A202C',
     marginBottom: '12px',
     lineHeight: 1.3,
   },
@@ -125,7 +125,7 @@ const useStyles = makeStyles({
   stepDescription: {
     fontSize: '16px',
     lineHeight: 1.6,
-    color: '#94A3B8',
+    color: '#4A5568',
     fontWeight: 400,
   },
   
@@ -139,18 +139,18 @@ const useStyles = makeStyles({
     backgroundColor: 'rgba(224, 122, 58, 0.08)',
     ...shorthands.padding('20px', '40px'),
     ...shorthands.borderRadius('8px'),
-    ...shorthands.border('1px', 'solid', 'rgba(224, 122, 58, 0.3)'),
+    ...shorthands.border('1px', 'solid', 'rgba(13, 50, 83, 0.2)'),
   },
 
   footerText: {
     fontSize: '16px',
     fontWeight: 400,
-    color: '#94A3B8',
+    color: '#4A5568',
     lineHeight: 1.6,
   },
 
   footerAccent: {
-    color: '#E07A3A',
+    color: '#0D3253',
     fontWeight: 600,
   },
 });

@@ -1,6 +1,6 @@
 import { makeStyles, shorthands } from '@fluentui/react-components';
 import { motion } from 'framer-motion';
-import { 
+import {
   CheckmarkCircleFilled,
   ShieldCheckmarkFilled,
 } from '@fluentui/react-icons';
@@ -8,7 +8,7 @@ import {
 const useStyles = makeStyles({
   section: {
     ...shorthands.padding('120px', '32px'),
-    backgroundColor: '#0B1120',
+    backgroundColor: '#0f0f1a', // Dark background
     '@media (max-width: 768px)': {
       ...shorthands.padding('80px', '24px'),
     },
@@ -30,14 +30,14 @@ const useStyles = makeStyles({
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#E07A3A',
+    color: '#ff6b35',
     marginBottom: '16px',
   },
 
   title: {
     fontSize: '48px',
     fontWeight: 700,
-    color: '#F1F5F9',
+    color: '#ffffff',
     marginBottom: '16px',
     lineHeight: 1.1,
     letterSpacing: '-0.02em',
@@ -48,14 +48,14 @@ const useStyles = makeStyles({
 
   subtitle: {
     fontSize: '20px',
-    color: '#94A3B8',
+    color: '#94a3b8',
     maxWidth: '700px',
     marginLeft: 'auto',
     marginRight: 'auto',
     lineHeight: 1.6,
     fontWeight: 400,
   },
-  
+
   grid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(2, 1fr)',
@@ -73,12 +73,13 @@ const useStyles = makeStyles({
     ...shorthands.padding('24px'),
     backgroundColor: 'rgba(255, 255, 255, 0.02)',
     ...shorthands.borderRadius('12px'),
-    ...shorthands.border('1px', 'solid', 'transparent'),
-    transitionProperty: 'border-color',
+    ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.05)'),
+    transitionProperty: 'border-color, background-color',
     transitionDuration: '0.2s',
     transitionTimingFunction: 'ease',
     ':hover': {
-      ...shorthands.borderColor('rgba(255, 255, 255, 0.08)'),
+      ...shorthands.borderColor('rgba(255, 107, 53, 0.3)'),
+      backgroundColor: 'rgba(255, 255, 255, 0.04)',
     },
   },
 
@@ -108,14 +109,14 @@ const useStyles = makeStyles({
   featureTitle: {
     fontSize: '16px',
     fontWeight: 600,
-    color: '#F1F5F9',
+    color: '#ffffff',
     lineHeight: 1.3,
   },
 
   featureDescription: {
     fontSize: '14px',
     lineHeight: 1.6,
-    color: '#94A3B8',
+    color: '#94a3b8',
     fontWeight: 400,
   },
 
@@ -164,7 +165,7 @@ const useStyles = makeStyles({
   highlightedText: {
     fontSize: '15px',
     lineHeight: 1.6,
-    color: '#94A3B8',
+    color: '#94a3b8',
     fontWeight: 400,
   },
 });
@@ -206,7 +207,7 @@ const valueItems = [
 
 export function ValueStack() {
   const styles = useStyles();
-  
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -223,7 +224,7 @@ export function ValueStack() {
             From deployment to documentation, we provide comprehensive support for your AI agent implementation
           </p>
         </motion.div>
-        
+
         <div className={styles.grid}>
           {valueItems.map((item, index) => (
             <motion.div

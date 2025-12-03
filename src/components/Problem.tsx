@@ -1,15 +1,16 @@
 import { makeStyles, shorthands } from '@fluentui/react-components';
 import { motion } from 'framer-motion';
-import { 
-  ArrowSyncCircleRegular, 
-  LockClosedRegular, 
-  MoneyRegular 
+import {
+  ArrowSyncCircleRegular,
+  LockClosedRegular,
+  MoneyRegular
 } from '@fluentui/react-icons';
 
 const useStyles = makeStyles({
   section: {
     ...shorthands.padding('120px', '32px'),
-    backgroundColor: '#0F172A',
+    backgroundColor: '#0f0f1a', // Dark background
+    backgroundImage: 'radial-gradient(circle at 50% 0%, rgba(255, 107, 53, 0.05) 0%, transparent 40%)',
     '@media (max-width: 768px)': {
       ...shorthands.padding('80px', '24px'),
     },
@@ -31,14 +32,14 @@ const useStyles = makeStyles({
     fontWeight: 600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
-    color: '#E07A3A',
+    color: '#ff6b35', // Brand orange
     marginBottom: '16px',
   },
 
   title: {
     fontSize: '48px',
     fontWeight: 700,
-    color: '#F1F5F9',
+    color: '#ffffff', // White text
     marginBottom: '16px',
     lineHeight: 1.1,
     letterSpacing: '-0.02em',
@@ -49,14 +50,14 @@ const useStyles = makeStyles({
 
   subtitle: {
     fontSize: '20px',
-    color: '#94A3B8',
+    color: '#94a3b8', // Muted text
     maxWidth: '700px',
     marginLeft: 'auto',
     marginRight: 'auto',
     lineHeight: 1.6,
     fontWeight: 400,
   },
-  
+
   grid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 1fr)',
@@ -68,38 +69,44 @@ const useStyles = makeStyles({
   },
 
   card: {
-    backgroundColor: 'rgba(255, 255, 255, 0.03)',
-    ...shorthands.borderRadius('12px'),
+    backgroundColor: 'rgba(26, 26, 46, 0.6)', // Glass background
+    backdropFilter: 'blur(12px)',
+    WebkitBackdropFilter: 'blur(12px)',
+    ...shorthands.borderRadius('16px'),
     ...shorthands.padding('32px'),
     ...shorthands.border('1px', 'solid', 'rgba(255, 255, 255, 0.08)'),
-    transitionProperty: 'background, border-color',
-    transitionDuration: '0.2s',
-    transitionTimingFunction: 'ease',
+    transitionProperty: 'transform, border-color, box-shadow',
+    transitionDuration: '0.3s',
+    transitionTimingFunction: 'cubic-bezier(0.2, 0.8, 0.2, 1)',
     minHeight: '280px',
     display: 'flex',
     flexDirection: 'column',
+    boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
     ':hover': {
-      backgroundColor: 'rgba(255, 255, 255, 0.05)',
-      ...shorthands.borderColor('rgba(255, 255, 255, 0.12)'),
+      transform: 'translateY(-4px)',
+      ...shorthands.borderColor('rgba(255, 107, 53, 0.5)'),
+      boxShadow: '0 10px 40px -10px rgba(255, 107, 53, 0.2)',
     },
   },
 
   iconWrapper: {
-    width: '40px',
-    height: '40px',
+    width: '48px',
+    height: '48px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: '24px',
-    color: '#E07A3A',
+    color: '#ff6b35',
     fontSize: '32px',
+    backgroundColor: 'rgba(255, 107, 53, 0.1)',
+    ...shorthands.borderRadius('12px'),
   },
 
   cardTitle: {
     fontSize: '20px',
     fontWeight: 600,
     color: '#FFFFFF',
-    marginBottom: '24px',
+    marginBottom: '16px',
     lineHeight: 1.3,
   },
 
@@ -107,14 +114,14 @@ const useStyles = makeStyles({
     fontSize: '16px',
     fontWeight: 400,
     lineHeight: 1.6,
-    color: '#94A3B8',
+    color: '#94a3b8',
   },
 
   footer: {
     textAlign: 'center',
     marginTop: '48px',
-    fontSize: '16px',
-    color: '#666666',
+    fontSize: '18px',
+    color: '#cbd5e1',
     fontStyle: 'italic',
   },
 });
@@ -139,11 +146,11 @@ const problems = [
 
 export function Problem() {
   const styles = useStyles();
-  
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <motion.div 
+        <motion.div
           className={styles.header}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -153,14 +160,14 @@ export function Problem() {
           <p className={styles.label}>The Problem</p>
           <h2 className={styles.title}>Enterprise AI Projects Are Stuck</h2>
           <p className={styles.subtitle}>
-            You've seen the demos. You know AI can transform your business. 
+            You've seen the demos. You know AI can transform your business.
             But getting from POC to production feels impossible.
           </p>
         </motion.div>
-        
+
         <div className={styles.grid}>
           {problems.map((problem, index) => (
-            <motion.div 
+            <motion.div
               key={problem.title}
               className={styles.card}
               initial={{ opacity: 0, y: 30 }}
@@ -176,8 +183,8 @@ export function Problem() {
             </motion.div>
           ))}
         </div>
-        
-        <motion.p 
+
+        <motion.p
           className={styles.footer}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
